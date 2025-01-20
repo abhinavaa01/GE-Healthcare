@@ -1,0 +1,26 @@
+/* Body */
+body {
+    font-family: "Source Sans Pro", "Source Han Sans", sans-serif !important;
+}
+
+
+/* Navigation Bar */
+.nav-link:hover {
+    color: #6022a6 !important;
+}
+
+
+
+/* Utilities */
+.text-bold {
+    font-weight: bold !important;
+}
+.text-bold i {
+    font-weight: bold !important;
+}
+.text-bold i::before {
+    font-weight: bold !important;
+}
+.bg-third{
+    background-color: #5B5B67;
+}
