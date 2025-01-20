@@ -8,6 +8,9 @@ body {
 .nav-link:hover {
     color: #6022a6 !important;
 }
+.dropdown-item.active, .dropdown-item:active {
+    background-color: white !important;
+}
 
 
 
@@ -23,4 +26,8 @@ body {
 }
 .bg-third{
     background-color: #5B5B67;
+}
+.form-control-border-focus:focus {
+    border-color: #6022a6 !important;
+    border-right: 0 !important;
 }
