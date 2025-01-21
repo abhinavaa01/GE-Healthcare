@@ -27,11 +27,8 @@ body {
 .insight-card-image {
   height: 200px;
   width: 100%;
-  object-fit: cover;
-  overflow: hidden;
-  transition: all ease-in-out 350ms;
 }
-.insight-card-image:hover {
+.zoomin-container img:hover {
   transform: scale(1.05);
 }
 .color-secondary {
@@ -46,6 +43,63 @@ body {
 }
 .border-orange {
     border-color: orange !important;
+}
+.text-decoration-none-one {
+  text-decoration: none !important;
+}
+.text-decoration-none-one:hover {
+    text-decoration: underline !important;
+}
+
+
+/* Choose a Topic Section */
+.round-number {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #6022a6;
+  color: black;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+.clouds-container div {
+    border-radius: 56px;
+    height: 44px;
+    padding: 10px 13px 10px 12px;
+    margin: 0px 12px 12px 0px;
+    width: auto;
+    background-color: #fff;
+    color: #222222;
+    border: 2px solid #C7C8CF
+}
+
+
+/* Categories Section */
+.categories-slide-button {
+    border-radius: 50%;
+    background-color: #6022a6;
+    color: #ffffff;
+    border: none;
+    width: 60px;
+    height: 60px;
+}.cards-one {
+    margin-right: 1rem;
+}
+.card-one-img-container {
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.card-one-img-container img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    padding: 2px;
+}
+.card-one-img-container img:hover {
+    padding: 0;
+    border: 2px solid #6022a6;
 }
 
 /* Utilities */
@@ -64,4 +118,18 @@ body {
 .form-control-border-focus:focus {
   border-color: #6022a6 !important;
   border-right: 0 !important;
+}
+.bg-fourth {
+  background-color: #F4F1F8;
+}
+.bg-fifth {
+  background-color: #FBF9FD;
+}
+.zoomin-container {
+    overflow: hidden;
+}
+.zoomin-container img {
+    object-fit: cover;
+    overflow: hidden;
+    transition: transform 0.35s ease-in-out;
 }
