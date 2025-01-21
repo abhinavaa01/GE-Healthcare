@@ -81,8 +81,8 @@ body {
     background-color: #6022a6;
     color: #ffffff;
     border: none;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }.cards-one {
     margin-right: 1rem;
 }
@@ -93,6 +93,7 @@ body {
 .card-one-img-container img {
     width: auto;
     height: auto;
+    max-height: 312px;
     object-fit: cover;
     border-radius: 10px;
     padding: 2px;
