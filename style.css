@@ -112,6 +112,9 @@ body {
 .text-bold i::before {
   font-weight: bold !important;
 }
+.bg-first {
+  background-color: #6022a6 !important;
+}
 .bg-third {
   background-color: #5b5b67;
 }
