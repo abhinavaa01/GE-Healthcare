@@ -50,6 +50,7 @@ video {
   font-size: 5.5rem;
   font-weight: 300 !important;
   line-height: 6.5rem;
+  letter-spacing: -0.5rem;
   color: #222222;
 }
 .border-orange {
