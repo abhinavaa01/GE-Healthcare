@@ -17,7 +17,7 @@ var screenWidth = window.innerWidth;
 var screenHeight = window.innerHeight;
 function adjustIframeWidthAndHeight() {
     const iframeElem = document.getElementById("mainvideofirst");
-    // iframeElem.setAttribute("width", screenWidth);
+    iframeElem.setAttribute("width", screenWidth);
     var hh = screenHeight;
     if (screenWidth < 768) {
         hh = 500;
@@ -26,7 +26,7 @@ function adjustIframeWidthAndHeight() {
     }
     console.log(screenWidth, hh);
     // console.log("screenHeight: ", screenHeight,hh);
-    // iframeElem.setAttribute("height", hh);
+    iframeElem.setAttribute("height", hh);
 }
 
 adjustIframeWidthAndHeight();
