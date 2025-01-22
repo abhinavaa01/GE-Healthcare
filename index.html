@@ -21,8 +21,29 @@
             a fraudulent call, please fill out the form.</div>
         <nav class="navbar navbar-expand-lg bg-white w-100">
             <div class="d-flex w-100 my-3 ms-lg-5">
-                <a class="navbar-brand ms-lg-5 ms-2" href="/"><img src="./logo.svg"></a>
-                <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="collapse"
+                <a class="navbar-brand ms-lg-5 ms-2 me-auto" href="/"><img src="./logo.svg"></a>
+                <div class="mb-2 d-flex d-lg-none flex-row my-auto">
+                    <div class="dropdown mx-2">
+                        <button class="nav-link text-bold" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-search fw-bold"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li class="dropdown-item border-secondary">
+                                <form class="d-flex" role="search">
+                                    <input
+                                        class="form-control form-control-border-focus border-end-0 rounded-0 me-0 w-auto"
+                                        type="search" placeholder="What are you looking for today?"
+                                        aria-label="Search">
+                                    <span class="bi bi-search pt-2 pe-2 border border-start-0 me-2"></span>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="nav-link text-bold ms-3 pe-3" href="#">
+                        <i class="bi bi-cart3 fw-bold"></i>
+                    </a>
+                </div>
+                <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -51,8 +72,7 @@
                             <a class="nav-link" href="#">About Us</a>
                         </li>
                     </ul>
-                    <div class="ms-auto"></div>
-                    <div class="ms-auto mb-2 d-flex flex-row">
+                    <div class="ms-auto mb-2 d-lg-flex d-none flex-row">
                         <div class="dropdown mx-1">
                             <button class="nav-link text-bold" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-search"></i>
@@ -72,7 +92,7 @@
                         <a class="nav-link text-bold mx-1" href="#">
                             <i class="bi bi-bookmark"></i>
                         </a>
-                        <a class="nav-link text-bold mx-1" href="#">
+                        <a class="nav-link text-bold mx-1 pe-3" href="#">
                             <i class="bi bi-cart2"></i>
                         </a>
                     </div>
@@ -89,7 +109,18 @@
             <div id="video-container w-100 h-auto overflow-hidden">
 
                 <!-- <iframe allow="autoplay; fullscreen; picture-in-picture; camera; microphone; display-capture; clipboard-write" allowfullscreen="" allowtransparency="true" referrerpolicy="no-referrer-when-downgrade" class="vidyard-iframe-nZuhN16mNiJnc7542kqzHW" frameborder="0" height="100%" width="100%" scrolling="no" src="https://play.vidyard.com/nZuhN16mNiJnc7542kqzHW?disable_popouts=1&amp;v=4.3.15&amp;type=inline&amp;preload=auto&amp;hidden_controls=1&amp;muted=1&amp;autoplay=1" title="care-that-can-desktop" style="opacity: 1; background-color: transparent; position: absolute; top: 0px; left: 0px;"></iframe> -->
-                <iframe id="mainvideofirst" allow="autoplay; fullscreen; picture-in-picture; camera; microphone; display-capture; clipboard-write" allowfullscreen="" allowtransparency="true" width="1" height="1" referrerpolicy="no-referrer-when-downgrade" class="vidyard-iframe-DRMzgsFprMVo4GXVN2San3" frameborder="0" width="100%" scrolling="no" src="https://play.vidyard.com/DRMzgsFprMVo4GXVN2San3?disable_popouts=1&amp;v=4.3.15&amp;type=inline&amp;preload=auto&amp;hidden_controls=1&amp;muted=1&amp;autoplay=1" title="purpose-desktop" style="opacity: 1; background-color: transparent;"></iframe>
+                <iframe id="mainvideofirst" allow="autoplay; fullscreen; picture-in-picture; camera; microphone; display-capture; clipboard-write" allowfullscreen="" allowtransparency="true" width="1" height="1" loop="true" referrerpolicy="no-referrer-when-downgrade" class="vidyard-iframe-DRMzgsFprMVo4GXVN2San3" frameborder="0" width="100%" scrolling="no" src="https://play.vidyard.com/nZuhN16mNiJnc7542kqzHW?disable_popouts=1&amp;v=4.3.15&amp;type=inline&amp;preload=auto&amp;hidden_controls=1&amp;muted=1&amp;autoplay=1" title="purpose-desktop" style="opacity: 1; background-color: transparent;"></iframe>
+            </div>
+            <div class="py-5 d-flex px-5">
+                <div class="w-auto me-auto text-dark">
+                    <span id="currentVideo" class="">1</span>
+                    <span class="px-2 text-opacity-75">/</span>
+                    <span class="text-opacity-75">2</span>
+                </div>
+                <div class="w-auto ms-auto">
+                    <span onclick="prevVideoCarousel()" role="button" class="bi bi-chevron-left fs-4 p-2 color-secondary"></span>
+                    <span onclick="nextVideoCarousel()" disabled="true" role="button" class="bi bi-chevron-right fs-4 p-2 color-secondary rounded-circle border-secondary-one disabled"></span>
+                </div>
             </div>
             <h1 id="" class="px-5">This section would be done later.</h1>
             <h1 id="" class="px-5">This is a placeholder for the carousel section.</h1>
@@ -98,46 +129,54 @@
         <!-- News and Insights Section -->
         <section id="newsandinsights" class="py-5 w-100 overflow-hidden">
             <div class="w-100 overflow-hidden">
-                <h4 class="px-5 my-5 fw-bold">News and Insights</h4>
+                <h4 class="px-5 mt-5 fw-bold fs-small-lg">News and Insights</h4>
                 <div class="row gx-3 px-5">
-                    <div class="col-6 col-lg-3 d-flex flex-column">
-                        <div class="card-without-css">
-                            <div class="zoomin-container">
-                                <img src="./images/23049_GE2688.jpg" alt="" class="insight-card-image zoomin-image">
+                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
+                        <div class="card-without-css row">
+                            <div class="zoomin-container col-4 col-lg-12">
+                                <img src="./images/23049_GE2688.jpg" alt="" class="h-auto w-100 insight-card-image zoomin-image">
                             </div>
-                            <div class="py-4 text-justify">Reflecting on a year of innovation at Verisound</div>
+                            <div class="col-8 col-lg-12 d-flex flex-column">
+                            <div class="py-lg-4 text-justify fs-small-lg">Reflecting on a year of innovation at Verisound</div>
                             <small class="fw-small">January 09, 2025</small>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3 d-flex flex-column">
-                        <div class="card-without-css">
-                            <div class="zoomin-container">
+                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
+                        <div class="card-without-css row">
+                            <div class="zoomin-container col-4 col-lg-12">
                                 <img src="./images/AI guided ultrasound.png" alt=""
-                                    class="insight-card-image zoomin-image">
+                                    class="h-auto w-100 insight-card-image zoomin-image">
                             </div>
-                            <div class="py-4 text-justify">AI-Guided Ultrasound: From Innovation to Impact</div>
+                            <div class="col-8 col-lg-12 d-flex flex-column">
+                            <div class="py-lg-4 text-justify fs-small-lg">AI-Guided Ultrasound: From Innovation to Impact</div>
                             <small class="fw-small">January 02, 2025</small>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3 d-flex flex-column">
-                        <div class="card-without-css">
-                            <div class="zoomin-container">
+                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
+                        <div class="card-without-css row">
+                            <div class="zoomin-container col-4 col-lg-12">
                                 <img src="./images/career-ops-mobile.avif" alt=""
-                                    class="insight-card-image zoomin-image">
+                                    class="h-auto w-100 insight-card-image zoomin-image">
                             </div>
-                            <div class="py-4 text-justify">How agentic AI systems can solve the three most pressing
+                            <div class="col-8 col-lg-12 d-flex flex-column">
+                            <div class="py-lg-4 text-justify fs-small-lg">How agentic AI systems can solve the three most pressing
                                 problems in healthcare today</div>
                             <small class="fw-small">December 10, 2024</small>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3 d-flex flex-column">
-                        <div class="card-without-css">
-                            <div class="zoomin-container">
+                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
+                        <div class="card-without-css row">
+                            <div class="zoomin-container col-4 col-lg-12">
                                 <img src="./images/RSNA AI Ultrasound Ryan.jpg" alt=""
-                                    class="insight-card-image zoomin-image">
+                                    class="h-auto w-100 insight-card-image zoomin-image">
                             </div>
-                            <div class="py-4 text-justify">Verisound at RSNA 2024: Shaping the future of radiology</div>
+                            <div class="col-8 col-lg-12 d-flex flex-column">
+                            <div class="py-lg-4 text-justify fs-small-lg">Verisound at RSNA 2024: Shaping the future of radiology</div>
                             <small class="fw-small">December 09, 2024</small>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,26 +186,23 @@
                 </div>
             </div>
 
-            <div class="mt-5 py-5">
+            <div class="mt-5 pt-5">
                 <div class="row gx-4 px-5 text-center">
-                    <div class="col-6 col-lg-3">
-                        <div class="fs-numbers">$1B</div>
-                        <div class="border-danger py-4 text-justify border-bottom border-4 border-opacity-50">Invested
-                            in R&D annually</div>
+                    <div class="col-6 col-lg-3 h-100 d-flex flex-column">
+                        <div class="fs-numbers text-start text-lg-center mb-auto">$1B</div>
+                        <div class="border-danger pt-4 text-start text-dark text-opacity-50 border-bottom border-4 border-opacity-50 h-specific mt-auto">Invested in R&D annually</div>
                     </div>
                     <div class="col-6 col-lg-3">
-                        <div class="fs-numbers">259K</div>
-                        <div class="py-4 text-justify border-bottom border-4 border-dark border-opacity-50">Invested in
-                            R&D annually</div>
+                        <div class="fs-numbers text-start text-lg-center">259K</div>
+                        <div class="py-4 text-start text-dark text-opacity-50 border-bottom border-4 border-dark border-opacity-50 h-specific">Patients supported daily using GE HealthCare imaging technology</div>
                     </div>
                     <div class="col-6 col-lg-3">
-                        <div class="fs-numbers">4M</div>
-                        <div class="py-4 text-justify border-bottom border-4 border-success">Invested in R&D annually
-                        </div>
+                        <div class="fs-numbers text-start text-lg-center">4M</div>
+                        <div class="py-4 text-start text-dark text-opacity-50 border-bottom border-4 border-success h-specific">Imaging, mobile, diagnostic and monitoring devices worldwide</div>
                     </div>
                     <div class="col-6 col-lg-3">
-                        <div class="fs-numbers">2B+</div>
-                        <div class="py-4 text-justify border-bottom border-4 border-info">Invested in R&D annually</div>
+                        <div class="fs-numbers text-start text-lg-center">2B+</div>
+                        <div class="py-4 text-start text-dark text-opacity-50 border-bottom border-4 border-info h-specific">Patient scans managed by GE HealthCare technology annually</div>
                     </div>
                 </div>
             </div>
@@ -198,15 +234,15 @@
         <!-- Categories Section -->
         <section class="bg-fifth p-5">
             <div class="d-flex w-100 justify-content-between py-3">
-                <div class="w-auto text-uppercase fs-1">our products by category</div>
-                <div class="w-auto d-flex">
+                <div class="w-auto fs-small-lg text-uppercase fs-1 col-12 col-lg-6">our products by category</div>
+                <div class="w-auto d-lg-flex d-none">
                     <button class="categories-slide-button mx-2" onclick="scrollToTheLeft()"><i
                             class="bi bi-chevron-left text-white"></i></button>
                     <button class="categories-slide-button mx-2" onclick="scrollToTheRight()"><i
                             class="bi bi-chevron-right text-white"></i></button>
                 </div>
             </div>
-            <div class="d-flex flex-row overflow-hidden" id="scroll">
+            <div class="col-8 col-lg-12 d-flex flex-row overflow-hidden" id="scroll">
                 <div class="cards-one d-flex">
                     <div class="card-one f-flex flex-column">
                         <a href="" class="w-100 card-one-img-container">

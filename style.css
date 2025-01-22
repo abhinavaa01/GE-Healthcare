@@ -34,8 +34,8 @@ video {
   overflow: hidden;
 }
 .insight-card-image {
-  height: 200px;
-  width: 100%;
+    aspect-ratio: 1/1 !important;
+    object-fit: cover !important;
 }
 .zoomin-container img:hover {
   transform: scale(1.05);
@@ -82,7 +82,7 @@ video {
   width: auto;
   background-color: #fff;
   color: #222222;
-  border: 2px solid #c7c8cf;
+  border: 1px solid #c7c8cf;
 }
 
 /* Categories Section */
@@ -167,4 +167,26 @@ video {
   object-fit: cover;
   overflow: hidden;
   transition: transform 0.35s ease-in-out;
+}
+.border-secondary-one {
+    border: 2px solid #6022a6 !important;
+}
+.h-specific {
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .fs-small-lg {
+        font-size: smaller !important;
+    }
+    .fw-small {
+        font-size: x-small !important;
+    }
+    .fs-numbers {
+        font-size: 3rem !important;
+        line-height: 4rem !important;
+        letter-spacing: -0.2rem !important;
+    }
+    
 }
