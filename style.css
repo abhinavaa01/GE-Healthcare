@@ -1,6 +1,7 @@
 /* Body */
 body {
   font-family: "Source Sans Pro", "Source Han Sans", sans-serif !important;
+  letter-spacing: -0.05rem;
 }
 
 /* Navigation Bar */
@@ -33,7 +34,7 @@ video {
   overflow: hidden;
 }
 .insight-card-image {
-  aspect-ratio: 1/1 !important;
+  aspect-ratio: 2/1 !important;
   object-fit: cover !important;
 }
 .zoomin-container img:hover {
@@ -173,6 +174,9 @@ video {
   padding-right: 24px !important;
   padding-left: 24px !important;
 }
+.text-animate-fade {
+    transition: all 0.3s ease-in-out;
+}
 
 @media (max-width: 768px) {
   .side-paddings {
@@ -183,12 +187,15 @@ video {
     font-size: smaller !important;
   }
   .fw-small {
-    font-size: x-small !important;
+    font-size: small !important;
   }
   .fs-numbers {
     font-size: 3rem !important;
     line-height: 4rem !important;
     letter-spacing: -0.2rem !important;
+  }
+  .footer-buttons a {
+      width: 50% !important;
   }
 }
 @media (min-width: 768px) {
