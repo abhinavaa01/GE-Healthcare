@@ -211,6 +211,10 @@ video {
   .footer-buttons a {
       width: 50% !important;
   }
+  .insight-card-image {
+    aspect-ratio: 1/1 !important;
+    object-fit: cover !important;
+  }
 }
 @media (min-width: 768px) {
     
