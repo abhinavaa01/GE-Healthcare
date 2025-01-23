@@ -94,6 +94,10 @@ video {
   width: 40px;
   height: 40px;
 }
+.categories-slide-button.disabled {
+    color: #c7c8cf !important;
+    background-color: #b4b4bf !important;
+}
 .cards-one {
   margin-right: 1rem;
 }
@@ -102,12 +106,22 @@ video {
   transition: all 0.3s ease-in-out;
 }
 .card-one-img-container img {
-  width: auto;
-  height: auto;
-  max-height: 312px;
+  aspect-ratio: 1 !important;
   object-fit: cover;
   border-radius: 10px;
   padding: 2px;
+}
+@media (max-width: 768px) {
+    .card-one-img-container img {
+        width: 255px;
+        height: 255px;
+    }
+}
+@media (min-width: 768px) {
+    .card-one-img-container img {
+        width: 336px;
+        height: 336px;
+    }
 }
 .card-one-img-container img:hover {
   padding: 0;

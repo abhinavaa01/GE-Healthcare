@@ -136,10 +136,10 @@
         <!-- News and Insights Section -->
         <section id="newsandinsights" class="py-5 w-100 overflow-hidden side-paddings">
             <div class="w-100 overflow-hidden">
-                <h4 class="side-paddings mt-5 fw-bold fs-small-lg">News and Insights</h4>
+                <h5 class="side-paddings mt-5 fw-bold fs-small-lg">News and Insights</h5>
                 <div class="row gx-3 side-paddings">
                     <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
-                        <div class="card-without-css row">
+                        <div role="button" class="card-without-css row">
                             <div class="zoomin-container col-4 col-lg-12">
                                 <img src="./images/23049_GE2688.jpg" alt=""
                                     class="w-100 insight-card-image zoomin-image">
@@ -152,7 +152,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
-                        <div class="card-without-css row">
+                        <div role="button" class="card-without-css row">
                             <div class="zoomin-container col-4 col-lg-12">
                                 <img src="./images/AI guided ultrasound.png" alt=""
                                     class="h-auto w-100 insight-card-image zoomin-image">
@@ -165,7 +165,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
-                        <div class="card-without-css row">
+                        <div role="button" class="card-without-css row">
                             <div class="zoomin-container col-4 col-lg-12">
                                 <img src="./images/career-ops-mobile.avif" alt=""
                                     class="h-auto w-100 insight-card-image zoomin-image">
@@ -179,7 +179,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
-                        <div class="card-without-css row">
+                        <div role="button" class="card-without-css row">
                             <div class="zoomin-container col-4 col-lg-12">
                                 <img src="./images/RSNA AI Ultrasound Ryan.jpg" alt=""
                                     class="h-auto w-100 insight-card-image zoomin-image">
@@ -233,7 +233,7 @@
             <div class="d-flex py-4 flex-column">
                 <div class="mx-auto round-number">1</div>
                 <div class="mx-auto text-uppercase fw-bold pt-3 pb-4">Choose a Topic</div>
-                <div class="fs-1 text-center">I'd like to lern more about</div>
+                <div class="fs-1 text-center">I'd like to learn more about</div>
             </div>
             <div class="clouds-container row gx-3 side-paddings justify-content-center">
                 <div class="">Artificial Intelligence</div>
@@ -256,13 +256,13 @@
             <div class="d-flex w-100 justify-content-between py-3">
                 <div class="w-auto fs-small-lg text-uppercase fs-2 col-12 col-lg-6">our products by category</div>
                 <div class="w-auto d-lg-flex d-none">
-                    <button class="categories-slide-button mx-2" onclick="scrollToTheLeft()"><i
+                    <button id="leftScrollArrow" class="categories-slide-button mx-2 disabled" disabled="true" onclick="scrollToTheLeft()"><i
                             class="bi bi-chevron-left text-white"></i></button>
-                    <button class="categories-slide-button mx-2" onclick="scrollToTheRight()"><i
+                    <button id="rightScrollArrow" class="categories-slide-button mx-2" onclick="scrollToTheRight()"><i
                             class="bi bi-chevron-right text-white"></i></button>
                 </div>
             </div>
-            <div class="col-8 col-lg-12 d-flex flex-row overflow-hidden" id="scroll">
+            <div class="d-flex flex-row overflow-hidden position-relative" id="scroll">
                 <div class="cards-one d-flex">
                     <div class="card-one f-flex flex-column">
                         <a href="" class="w-100 card-one-img-container">
@@ -409,7 +409,7 @@
             </div>
             <div class="row gx-3 gy-3 py-5">
                 <div class="col-12 col-lg-4 d-flex flex-column">
-                    <div class="card-without-css">
+                    <div role="button" class="card-without-css">
                         <div class="zoomin-container rounded-4 overflow-hidden w-100">
                             <img src="./images/videos-01.avif" alt="Making Ventilators"
                                 class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
@@ -419,7 +419,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 d-flex flex-column">
-                    <div class="card-without-css">
+                    <div role="button" class="card-without-css">
                         <div class="zoomin-container rounded-4 overflow-hidden w-100">
                             <img src="./images/videos-02.avif" alt="Making Ventilators"
                                 class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
@@ -429,7 +429,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 d-flex flex-column">
-                    <div class="card-without-css">
+                    <div role="button" class="card-without-css">
                         <div class="zoomin-container rounded-4 overflow-hidden w-100">
                             <img src="./images/videos-03.avif" alt="Making Ventilators"
                                 class="insight-card-image zoomin-image rounded-4 w-100 h-auto">

@@ -4,17 +4,27 @@ setTimeout(() => {
 
 function scrollToTheLeft() {
   const elem = document.getElementById("scroll");
+  const btn = document.getElementById("leftScrollArrow");
   elem.scrollTo({
     left: elem.scrollLeft - elem.offsetWidth / 1.5,
     behavior: "smooth",
   });
+  if (elem.scrollLeft === 0) {
+    btn.classList.add("disabled");
+    btn.setAttribute("disabled", "true");
+  }
 }
 function scrollToTheRight() {
   const elem = document.getElementById("scroll");
+  const btn = document.getElementById("leftScrollArrow");
   elem.scrollTo({
     left: elem.scrollLeft + elem.offsetWidth / 1.5,
     behavior: "smooth",
   });
+  if (elem.scrollLeft === 0) {
+    btn.classList.remove("disabled");
+    btn.removeAttribute("disabled");
+  }
 }
 
 var screenWidth = window.innerWidth;
