@@ -94,7 +94,7 @@ video {
   width: 40px;
   height: 40px;
 }
-.categories-slide-button.disabled {
+.categories-slide-button.disabled, .categories-relative-button.disabled {
     color: #c7c8cf !important;
     background-color: #b4b4bf !important;
 }
@@ -190,6 +190,13 @@ video {
 }
 .text-animate-fade {
     transition: all 0.3s ease-in-out;
+}
+.hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {

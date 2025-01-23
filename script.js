@@ -1,29 +1,35 @@
 setTimeout(() => {
-    nextVideoCarousel();
+  nextVideoCarousel();
 }, 12000);
 
 function scrollToTheLeft() {
   const elem = document.getElementById("scroll");
   const btn = document.getElementById("leftScrollArrow");
+  const btn2 = document.getElementById("leftScrollArrow2");
   elem.scrollTo({
     left: elem.scrollLeft - elem.offsetWidth / 1.5,
     behavior: "smooth",
   });
   if (elem.scrollLeft === 0) {
     btn.classList.add("disabled");
+    btn2.classList.add("disabled"); // for the second arrow
     btn.setAttribute("disabled", "true");
+    btn2.setAttribute("disabled", "true"); // for the second arrow
   }
 }
 function scrollToTheRight() {
   const elem = document.getElementById("scroll");
   const btn = document.getElementById("leftScrollArrow");
+  const btn2 = document.getElementById("leftScrollArrow2");
   elem.scrollTo({
     left: elem.scrollLeft + elem.offsetWidth / 1.5,
     behavior: "smooth",
   });
   if (elem.scrollLeft === 0) {
     btn.classList.remove("disabled");
+    btn2.classList.remove("disabled"); // for the second arrow
     btn.removeAttribute("disabled");
+    btn2.removeAttribute("disabled"); // for the second arrow
   }
 }
 
@@ -67,12 +73,14 @@ function changeCarouselContent(num) {
   setTimeout(() => {
     if (num) {
       heading.innerText = "GE HealthCare";
-      subheading.innerText = "A new era of more precise, connected, and compassionate care.";
+      subheading.innerText =
+        "A new era of more precise, connected, and compassionate care.";
       heading.style.opacity = 1;
       subheading.style.opacity = 1;
     } else {
       heading.innerText = "Care that can change the world";
-      subheading.innerText = "Introducing GE HealthCare. An independent healthcare technology and diagnostics company that puts our people and resources closer to those who need them most.";
+      subheading.innerText =
+        "Introducing GE HealthCare. An independent healthcare technology and diagnostics company that puts our people and resources closer to those who need them most.";
       heading.style.opacity = 1;
       subheading.style.opacity = 1;
     }
