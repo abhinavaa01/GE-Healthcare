@@ -2,6 +2,11 @@ setTimeout(() => {
   nextVideoCarousel();
 }, 12000);
 
+function closePopup() {
+    const popup = document.getElementById("popup-country");
+    popup.classList.add("d-none");
+}
+
 function scrollToTheLeft() {
   const elem = document.getElementById("scroll");
   const btn = document.getElementById("leftScrollArrow");

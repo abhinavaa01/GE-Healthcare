@@ -198,7 +198,9 @@ video {
         display: none;
     }
 }
-
+.bg-sixth {
+  background-color: #420588;
+}
 @media (max-width: 768px) {
   .side-paddings {
     padding-right: 20px !important;
@@ -224,6 +226,7 @@ video {
   }
 }
 @media (min-width: 768px) {
-    
-    
+    .w-md-auto {
+        width: auto !important;
+    }
 }
