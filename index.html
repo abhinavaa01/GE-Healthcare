@@ -16,20 +16,20 @@
     <!-- Popup Country -->
      <div class="w-100 bg-sixth overflow-hidden py-3 d-flex flex-column flex-lg-row" id="popup-country">
         <div class="col-12 col-lg-6 text-start text-lg-center text-white fs-small-lg row">
-            <div class="col-9 col-md-12">Select another country or region to view content specific to your location.</div>
-            <span class="btn btn-close ms-auto d-lg-none" onclick="closePopup()"></span>
+            <div class="col-9 col-md-12 my-auto">Select another country or region to view content specific to your location.</div>
+            <span class="btn btn-close ms-auto d-lg-none my-auto" onclick="closePopup()"></span>
         </div>
-        <div class="col-12 col-lg-6">
-            <div class="col-12 col-lg-6 px-1">
+        <div class="col-12 col-lg-6 d-flex flex-column flex-md-row">
+            <div class="col-12 col-lg-6 px-2 my-auto">
                 <!-- country selector dropdown -->
-                 <select name="chooseCountry" id="chooseCountry" class="btn text-dark fw-bold w-100 border-0 bg-white">
+                 <select name="chooseCountry" id="chooseCountry" class="btn text-dark fw-bold w-100 border-0 bg-white my-auto">
                     <option value="" disabled="true" selected>Select Country</option>
                     <option value="India">India</option>
                  </select>
             </div>
-            <div class="col-12 col-lg-6 py-2 px-1">
-                <button class="btn text-white col-12 w-md-auto border-white" onclick="closePopup()">Continue</button>
-                <span class="btn btn-close d-none d-md-block me-auto" onclick="closePopup()"></span>
+            <div class="col-12 col-lg-6 py-2 px-2 d-flex flex-row">
+                <button class="btn text-white col-12 w-md-auto border-white py-1 me-md-3" onclick="closePopup()">Continue</button>
+                <span class="btn btn-close d-none d-md-block me-auto my-auto" onclick="closePopup()"></span>
             </div>
         </div>
      </div>
