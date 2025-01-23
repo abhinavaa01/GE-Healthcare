@@ -201,6 +201,14 @@ video {
 .bg-sixth {
   background-color: #420588;
 }
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url(https://api.iconify.design/akar-icons/chevron-down.svg) no-repeat center / contain;
+	background-size: 20px;
+	background-position: calc(100% - 10px);
+}
 @media (max-width: 768px) {
   .side-paddings {
     padding-right: 20px !important;
