@@ -14,27 +14,31 @@
 
 <body class="w-100 overflow-x-hidden">
     <!-- Popup Country -->
-    <div class="w-100 bg-sixth overflow-hidden py-3 d-flex flex-column flex-lg-row" id="popup-country">
-        <div class="col-12 col-lg-6 text-start text-lg-center text-white fs-small-lg row p-2">
-            <div class="col-9 col-md-12 my-auto px-3">Select another country or region to view content specific to your
-                location.</div>
-            <span class="btn btn-close ms-auto d-lg-none my-auto" onclick="closePopup()"></span>
-        </div>
-        <div class="col-12 col-lg-6 d-flex flex-column flex-md-row">
-            <div class="col-12 col-lg-6 px-2 my-auto">
-                <!-- country selector dropdown -->
-                <select name="chooseCountry" id="chooseCountry"
-                    class="btn text-dark fw-bold w-100 border-0 bg-white my-auto">
-                    <option value="" disabled="true" selected>Select Country</option>
-                    <option value="India">India</option>
-                </select>
+    <div class="w-100 bg-sixth overflow-hidden py-3" id="popup-country">
+        <div class="wrapper-one max-width-lg d-flex flex-column flex-lg-row">
+            <div class="col-12 col-lg-6 text-start text-lg-center text-white fs-small-lg row p-2">
+                <div class="col-9 col-md-12 my-auto px-3">Select another country or region to view content specific to
+                    your
+                    location.</div>
+                <span class="btn btn-close ms-auto d-lg-none my-auto" onclick="closePopup()"></span>
             </div>
-            <div class="col-12 col-lg-6 py-2 px-2 d-flex flex-row">
-                <button class="btn text-white col-12 w-md-auto border-white py-1 me-md-3"
-                    onclick="closePopup()">Continue</button>
-                <span class="btn btn-close d-none d-md-block me-auto my-auto" onclick="closePopup()"></span>
+            <div class="col-12 col-lg-6 d-flex flex-column flex-md-row">
+                <div class="col-12 col-lg-6 px-2 my-auto">
+                    <!-- country selector dropdown -->
+                    <select name="chooseCountry" id="chooseCountry"
+                        class="btn text-dark fw-bold w-100 border-0 bg-white my-auto">
+                        <option value="" disabled="true" selected>Select Country</option>
+                        <option value="India">India</option>
+                    </select>
+                </div>
+                <div class="col-12 col-lg-6 py-2 px-2 d-flex flex-row">
+                    <button class="btn text-white col-12 w-md-auto border-white py-1 me-md-3"
+                        onclick="closePopup()">Continue</button>
+                    <span class="btn btn-close d-none d-md-block me-auto my-auto" onclick="closePopup()"></span>
+                </div>
             </div>
         </div>
+
     </div>
     <!-- Header / Navbar -->
     <header id="header" class="w-100">
@@ -43,8 +47,8 @@
             money to anyone suggesting they can provide employment with GE HealthCare. If you suspect you have received
             a fraudulent call, please fill out the form.</div>
         <nav class="navbar navbar-expand-lg bg-white w-100">
-            <div class="container-fluid w-100 my-3 ms-lg-5">
-                <a class="navbar-brand ms-lg-5 ms-2 me-auto" href="/"><img src="./logo.svg"></a>
+            <div class="container-fluid w-100 w-md-auto my-3 max-width-lg">
+                <a class="navbar-brand ms-2 me-auto" href="/"><img src="./logo.svg"></a>
                 <div class="mb-2 d-flex d-lg-none flex-row my-auto">
                     <div class="dropdown mx-2">
                         <button class="nav-link text-bold" href="#" data-bs-toggle="dropdown" aria-expanded="false">
@@ -139,29 +143,36 @@
                         title="purpose-desktop" style="opacity: 1; background-color: transparent;"></iframe>
                 </div>
                 <div class="position-absolute bottom-0 end-0 transale-middle mb-5 me-5">
-                    <i class="bi bi-pause-circle-fill fs-1 text-white rounded-circle p-0"></i>
+                    <i class="bi bi-pause fs-1 text-white rounded-circle p-0 bg-dark bg-opacity-50 py-2 px-3"></i>
                 </div>
             </div>
-            <div class="py-5 d-flex side-paddings">
-                <div class="w-auto me-auto text-dark">
-                    <span id="currentVideo" class="">1</span>
-                    <span class="px-1 text-opacity-75">/</span>
-                    <span class="text-opacity-75">2</span>
+            <div class="wrapper-one w-100 max-width-lg">
+                <div class="py-5 d-flex side-paddings negative-margin">
+                    <div class="w-auto me-auto text-dark">
+                        <span id="currentVideo" class="">1</span>
+                        <span class="px-1 text-opacity-75">/</span>
+                        <span class="text-opacity-75">2</span>
+                    </div>
+                    <div class="w-auto ms-auto">
+                        <span onclick="prevVideoCarousel()" role="button"
+                            class="bi bi-chevron-left fs-4 p-2 color-secondary margin-gap-16"></span>
+                        <span onclick="nextVideoCarousel()" disabled="true" role="button"
+                            class="bi bi-chevron-right fs-4 p-2 color-secondary rounded-circle border-secondary-one disabled"></span>
+                    </div>
                 </div>
-                <div class="w-auto ms-auto">
-                    <span onclick="prevVideoCarousel()" role="button"
-                        class="bi bi-chevron-left fs-4 p-2 color-secondary margin-gap-16"></span>
-                    <span onclick="nextVideoCarousel()" disabled="true" role="button"
-                        class="bi bi-chevron-right fs-4 p-2 color-secondary rounded-circle border-secondary-one disabled"></span>
+                <h1 id="carousel-heading" class="side-paddings text-animate-fade title-m">Care that can change the world
+                </h1>
+                <div id="carousel-subheading" class="side-paddings text-animate-fade fs-6 text-muted-one">
+                    Introducing GE
+                    HealthCare. An independent healthcare technology and diagnostics company that puts our people
+                    and resources closer to those who need them most.
                 </div>
             </div>
-            <h1 id="carousel-heading" class="side-paddings text-animate-fade">Care that can change the world</h1>
-            <div id="carousel-subheading" class="side-paddings text-animate-fade fs-6 text-dark text-opacity-75">Introducing GE HealthCare. An independent healthcare technology and diagnostics company that puts our people and resources closer to those who need them most.</div>
         </section>
 
         <!-- News and Insights Section -->
         <section id="newsandinsights" class="py-5 w-100 overflow-hidden side-paddings">
-            <div class="w-100 overflow-hidden">
+            <div class="w-100 overflow-hidden max-width-lg">
                 <h5 class="side-paddings mt-5 fw-bold fs-small-lg">News and Insights</h5>
                 <div class="row gx-3 side-paddings">
                     <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2 px-md-4">
@@ -170,7 +181,7 @@
                                 <img src="./images/23049_GE2688.jpg" alt=""
                                     class="w-100 insight-card-image zoomin-image overflow-hidden">
                             </div>
-                            <div class="col-8 col-lg-12 d-flex flex-column px-0">
+                            <div class="col-8 col-lg-12 d-flex flex-column px-3 px-lg-0">
                                 <div class="py-lg-4 text-justify fs-small-lg">Reflecting on a year of innovation at
                                     Verisound</div>
                                 <small class="fw-small">January 09, 2025</small>
@@ -183,7 +194,7 @@
                                 <img src="./images/AI guided ultrasound.png" alt=""
                                     class="h-auto w-100 insight-card-image zoomin-image">
                             </div>
-                            <div class="col-8 col-lg-12 d-flex flex-column px-0">
+                            <div class="col-8 col-lg-12 d-flex flex-column px-3 px-lg-0">
                                 <div class="py-lg-4 text-justify fs-small-lg">AI-Guided Ultrasound: From Innovation to
                                     Impact</div>
                                 <small class="fw-small">January 02, 2025</small>
@@ -196,7 +207,7 @@
                                 <img src="./images/career-ops-mobile.avif" alt=""
                                     class="h-auto w-100 insight-card-image zoomin-image">
                             </div>
-                            <div class="col-8 col-lg-12 d-flex flex-column px-0">
+                            <div class="col-8 col-lg-12 d-flex flex-column px-3 px-lg-0">
                                 <div class="py-lg-4 text-justify fs-small-lg">How agentic AI systems can solve the three
                                     most pressing
                                     problems in healthcare today</div>
@@ -210,7 +221,7 @@
                                 <img src="./images/RSNA AI Ultrasound Ryan.jpg" alt=""
                                     class="h-auto w-100 insight-card-image zoomin-image">
                             </div>
-                            <div class="col-8 col-lg-12 d-flex flex-column px-0">
+                            <div class="col-8 col-lg-12 d-flex flex-column px-3 px-lg-0">
                                 <div class="py-lg-4 text-justify fs-small-lg">Verisound at RSNA 2024: Shaping the future
                                     of radiology</div>
                                 <small class="fw-small">December 09, 2024</small>
@@ -224,30 +235,30 @@
                 </div>
             </div>
 
-            <div class="mt-5 pt-5">
+            <div class="mt-5 pt-5 max-width-lg">
                 <div class="row gx-4 side-paddings text-center">
                     <div class="col-6 col-lg-3 h-100 d-flex flex-column">
                         <div class="fs-numbers text-start mb-auto">$1B</div>
                         <div
-                            class="border-danger pt-4 text-start text-dark text-opacity-50 border-bottom border-4 border-opacity-50 h-specific mt-auto">
+                            class="border-danger pt-4 text-start text-muted-one border-bottom border-4 border-opacity-50 h-specific mt-auto">
                             Invested in R&D annually</div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="fs-numbers text-start">259K</div>
                         <div
-                            class="py-4 text-start text-dark text-opacity-50 border-bottom border-4 border-dark border-opacity-50 h-specific">
+                            class="py-4 text-start text-muted-one border-bottom border-4 border-dark border-opacity-50 h-specific">
                             Patients supported daily using GE HealthCare imaging technology</div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="fs-numbers text-start">4M</div>
                         <div
-                            class="py-4 text-start text-dark text-opacity-50 border-bottom border-4 border-success h-specific">
+                            class="py-4 text-start text-muted-one border-bottom border-4 border-success h-specific">
                             Imaging, mobile, diagnostic and monitoring devices worldwide</div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="fs-numbers text-start">2B+</div>
                         <div
-                            class="py-4 text-start text-dark text-opacity-50 border-bottom border-4 border-info h-specific">
+                            class="py-4 text-start text-muted-one border-bottom border-4 border-info h-specific">
                             Patient scans managed by GE HealthCare technology annually</div>
                     </div>
                 </div>
@@ -256,124 +267,131 @@
 
         <!-- Topic Section -->
         <section class="bg-fourth py-5 w-100 overflow-hidden">
-            <div class="d-flex py-4 flex-column">
-                <div class="mx-auto round-number">1</div>
-                <div class="mx-auto text-uppercase fw-bold pt-3 pb-4">Choose a Topic</div>
-                <div class="fs-1 text-center">I'd like to learn more about</div>
-            </div>
-            <div class="clouds-container row gx-3 side-paddings justify-content-center">
-                <div class="">Artificial Intelligence</div>
-                <div class="">Efficiency</div>
-                <div class="">Innovation</div>
-                <div class="">Access</div>
-                <div class="">Burnout</div>
-                <div class="">Cyber Security</div>
-                <div class="">Newest Products</div>
-                <div class="">Patient Outcomes</div>
-                <div class="">Cost Savings</div>
-                <div class="">COVID-19</div>
-                <div class="">Diversity</div>
-                <div class="">Patient Experience</div>
+            <div class="wrapper-one max-width-lg">
+                <div class="d-flex py-4 flex-column">
+                    <div class="mx-auto round-number">1</div>
+                    <div class="mx-auto text-uppercase fw-bold pt-3 pb-4">Choose a Topic</div>
+                    <div class="fs-1 text-center">I'd like to learn more about</div>
+                </div>
+                <div class="clouds-container row gx-3 side-paddings justify-content-center">
+                    <div class="">Artificial Intelligence</div>
+                    <div class="">Efficiency</div>
+                    <div class="">Innovation</div>
+                    <div class="">Access</div>
+                    <div class="">Burnout</div>
+                    <div class="">Cyber Security</div>
+                    <div class="">Newest Products</div>
+                    <div class="">Patient Outcomes</div>
+                    <div class="">Cost Savings</div>
+                    <div class="">COVID-19</div>
+                    <div class="">Diversity</div>
+                    <div class="">Patient Experience</div>
+                </div>
             </div>
         </section>
 
         <!-- Categories Section -->
         <section class="bg-fifth p-5 w-100 overflow-hidden">
-            <div class="d-flex w-100 justify-content-between py-3">
-                <div class="w-auto fs-small-lg text-uppercase fs-2 col-12 col-lg-6">our products by category</div>
-                <div class="w-auto d-lg-flex d-none">
-                    <button id="leftScrollArrow" class="categories-slide-button mx-2 disabled" disabled="true"
-                        onclick="scrollToTheLeft()"><i class="bi bi-chevron-left text-white"></i></button>
-                    <button id="rightScrollArrow" class="categories-slide-button mx-2" onclick="scrollToTheRight()"><i
-                            class="bi bi-chevron-right text-white"></i></button>
-                </div>
-            </div>
-            <div class="w-100 position-relative">
-                <div class="position-absolute start-0 top-50 translate-middle pe-4 d-lg-none">
-                    <button id="leftScrollArrow2"
-                        class="btn categories-relative-button bg-secondary-one rounded-circle disabled"
-                        onclick="scrollToTheLeft()" disabled="true" role="button">
-                        <span class="bi bi-chevron-left text-white"></span>
-                    </button>
-                </div>
-                <div class="position-absolute start-100 top-50 translate-middle ps-4 d-lg-none">
-                    <button id="rightScrollArrow2"
-                        class="btn categories-relative-button bg-secondary-one rounded-circle"
-                        onclick="scrollToTheRight()" role="button">
-                        <span class="bi bi-chevron-right text-white"></span>
-                    </button>
-                </div>
-                <div class="d-flex flex-row overflow-x-scroll hide-scrollbar w-100" id="scroll">
-                    <div class="cards-one d-flex">
-                        <div class="card-one f-flex flex-column">
-                            <a href="" class="w-100 card-one-img-container">
-                                <img src="./images/imaging.avif" alt="Imaging" class="card-one-image">
-                            </a>
-                            <div class="my-4 fs-3">Imaging</div>
+            <div class="wrapper-one w-100 max-width-lg">
+                <div class="wrapper-2 side-paddings">
+                    <div class="d-flex w-100 justify-content-between py-3">
+                        <div class="w-auto fs-small-lg text-uppercase fs-2 col-12 col-lg-6">our products by category
+                        </div>
+                        <div class="w-auto d-lg-flex d-none">
+                            <button id="leftScrollArrow" class="categories-slide-button mx-2 disabled" disabled="true"
+                                onclick="scrollToTheLeft()"><i class="bi bi-chevron-left text-white"></i></button>
+                            <button id="rightScrollArrow" class="categories-slide-button mx-2"
+                                onclick="scrollToTheRight()"><i class="bi bi-chevron-right text-white"></i></button>
                         </div>
                     </div>
-                    <div class="cards-one d-flex">
-                        <div class="card-one f-flex flex-column">
-                            <a href="" class="w-100 card-one-img-container">
-                                <img src="./images/ultrasound.avif" alt="Ultrasound" class="card-one-image">
-                            </a>
-                            <div class="my-4 fs-3">Ultrasound</div>
+                    <div class="w-100 position-relative">
+                        <div class="position-absolute start-0 top-50 translate-middle pe-4 d-lg-none">
+                            <button id="leftScrollArrow2"
+                                class="btn categories-relative-button bg-secondary-one rounded-circle disabled"
+                                onclick="scrollToTheLeft()" disabled="true" role="button">
+                                <span class="bi bi-chevron-left text-white"></span>
+                            </button>
                         </div>
-                    </div>
-                    <div class="cards-one d-flex">
-                        <div class="card-one f-flex flex-column">
-                            <a href="" class="w-100 card-one-img-container">
-                                <img src="./images/healthcare.avif" alt="Healthcare" class="card-one-image">
-                            </a>
-                            <div class="my-4 fs-3">Healthcare IT</div>
+                        <div class="position-absolute start-100 top-50 translate-middle ps-4 d-lg-none">
+                            <button id="rightScrollArrow2"
+                                class="btn categories-relative-button bg-secondary-one rounded-circle"
+                                onclick="scrollToTheRight()" role="button">
+                                <span class="bi bi-chevron-right text-white"></span>
+                            </button>
                         </div>
-                    </div>
-                    <div class="cards-one d-flex">
-                        <div class="card-one f-flex flex-column">
-                            <a href="" class="w-100 card-one-img-container">
-                                <img src="./images/contrast.avif" alt="Contrast" class="card-one-image">
-                            </a>
-                            <div class="my-4 fs-3">Contrast Media</div>
-                        </div>
-                    </div>
-                    <div class="cards-one d-flex">
-                        <div class="card-one f-flex flex-column">
-                            <a href="" class="w-100 card-one-img-container">
-                                <img src="./images/anasthesia.avif" alt="Anesthesia" class="card-one-image">
-                            </a>
-                            <div class="my-4 fs-3">Anesthesia Delivery</div>
-                        </div>
-                    </div>
-                    <div class="cards-one d-flex">
-                        <div class="card-one f-flex flex-column">
-                            <a href="" class="w-100 card-one-img-container">
-                                <img src="./images/diagnostic.avif" alt="Diagnostic" class="card-one-image">
-                            </a>
-                            <div class="my-4 fs-3">Diagnostic ECG</div>
-                        </div>
-                    </div>
-                    <div class="cards-one d-flex">
-                        <div class="card-one f-flex flex-column">
-                            <a href="" class="w-100 card-one-img-container">
-                                <img src="./images/maternal.avif" alt="Maternal" class="card-one-image">
-                            </a>
-                            <div class="my-4 fs-3">Maternal Infant Care</div>
-                        </div>
-                    </div>
-                    <div class="cards-one d-flex">
-                        <div class="card-one f-flex flex-column">
-                            <a href="" class="w-100 card-one-img-container">
-                                <img src="./images/patient.avif" alt="Patient" class="card-one-image">
-                            </a>
-                            <div class="my-4 fs-3">Patient Monitors</div>
-                        </div>
-                    </div>
-                    <div class="cards-one d-flex">
-                        <div class="card-one f-flex flex-column">
-                            <a href="" class="w-100 card-one-img-container">
-                                <img src="./images/ventilator.avif" alt="Ventilators" class="card-one-image">
-                            </a>
-                            <div class="my-4 fs-3">Ventilators</div>
+                        <div class="d-flex flex-row overflow-x-scroll hide-scrollbar w-100" id="scroll">
+                            <div class="cards-one d-flex">
+                                <div class="card-one f-flex flex-column">
+                                    <a href="" class="w-100 card-one-img-container">
+                                        <img src="./images/imaging.avif" alt="Imaging" class="card-one-image">
+                                    </a>
+                                    <div class="my-4 fs-3">Imaging</div>
+                                </div>
+                            </div>
+                            <div class="cards-one d-flex">
+                                <div class="card-one f-flex flex-column">
+                                    <a href="" class="w-100 card-one-img-container">
+                                        <img src="./images/ultrasound.avif" alt="Ultrasound" class="card-one-image">
+                                    </a>
+                                    <div class="my-4 fs-3">Ultrasound</div>
+                                </div>
+                            </div>
+                            <div class="cards-one d-flex">
+                                <div class="card-one f-flex flex-column">
+                                    <a href="" class="w-100 card-one-img-container">
+                                        <img src="./images/healthcare.avif" alt="Healthcare" class="card-one-image">
+                                    </a>
+                                    <div class="my-4 fs-3">Healthcare IT</div>
+                                </div>
+                            </div>
+                            <div class="cards-one d-flex">
+                                <div class="card-one f-flex flex-column">
+                                    <a href="" class="w-100 card-one-img-container">
+                                        <img src="./images/contrast.avif" alt="Contrast" class="card-one-image">
+                                    </a>
+                                    <div class="my-4 fs-3">Contrast Media</div>
+                                </div>
+                            </div>
+                            <div class="cards-one d-flex">
+                                <div class="card-one f-flex flex-column">
+                                    <a href="" class="w-100 card-one-img-container">
+                                        <img src="./images/anasthesia.avif" alt="Anesthesia" class="card-one-image">
+                                    </a>
+                                    <div class="my-4 fs-3">Anesthesia Delivery</div>
+                                </div>
+                            </div>
+                            <div class="cards-one d-flex">
+                                <div class="card-one f-flex flex-column">
+                                    <a href="" class="w-100 card-one-img-container">
+                                        <img src="./images/diagnostic.avif" alt="Diagnostic" class="card-one-image">
+                                    </a>
+                                    <div class="my-4 fs-3">Diagnostic ECG</div>
+                                </div>
+                            </div>
+                            <div class="cards-one d-flex">
+                                <div class="card-one f-flex flex-column">
+                                    <a href="" class="w-100 card-one-img-container">
+                                        <img src="./images/maternal.avif" alt="Maternal" class="card-one-image">
+                                    </a>
+                                    <div class="my-4 fs-3">Maternal Infant Care</div>
+                                </div>
+                            </div>
+                            <div class="cards-one d-flex">
+                                <div class="card-one f-flex flex-column">
+                                    <a href="" class="w-100 card-one-img-container">
+                                        <img src="./images/patient.avif" alt="Patient" class="card-one-image">
+                                    </a>
+                                    <div class="my-4 fs-3">Patient Monitors</div>
+                                </div>
+                            </div>
+                            <div class="cards-one d-flex">
+                                <div class="card-one f-flex flex-column">
+                                    <a href="" class="w-100 card-one-img-container">
+                                        <img src="./images/ventilator.avif" alt="Ventilators" class="card-one-image">
+                                    </a>
+                                    <div class="my-4 fs-3">Ventilators</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -381,162 +399,189 @@
         </section>
 
         <!-- Unnamed Section -->
-        <section class="p-5">
-            <div class="row py-4">
-                <div class="col-12 col-md-6">
-                    <img src="./images/unnamed-01.avif" alt="GE shop" class="rounded rounded-4 w-100 h-auto">
-                </div>
-                <div class="col-12 col-md-6 d-flex flex-column ps-md-5">
-                    <div class="ps-md-4 fs-2 mt-3 mt-md-auto text-start">Your very own GE Shop!</div>
-                    <div class="ps-md-4 fs-5 fs-small-lg text-opacity-75 text-dark mb-auto text-start">Now accessible,
-                        wherever you are
+        <section class="py-5 w-100 overflow-hidden">
+            <div class="wrapper-one">
+                <div class="wrapper-two side-paddings">
+                    <div class="row py-4 side-paddings">
+                        <div class="col-12 col-md-6">
+                            <img src="./images/unnamed-01.avif" alt="GE shop" class="rounded rounded-4 w-100 h-auto">
+                        </div>
+                        <div class="col-12 col-md-6 d-flex flex-column ps-md-5">
+                            <div class="ps-md-4 fs-2 mt-3 mt-md-auto text-start">Your very own GE Shop!</div>
+                            <div class="ps-md-4 fs-5 fs-small-lg text-opacity-75 text-dark mb-auto text-start">Now
+                                accessible,
+                                wherever you are
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row py-4 flex-row">
-                <div class="col-12 col-md-6 d-none d-md-flex flex-column">
-                    <small class="fw-bold fs-6 mt-auto">Investors</small>
-                    <div class="fs-3 text-opacity-75 text-dark py-4">Stay up to date on GE HealthCare’s plans for growth
-                        as a standalone company.</div>
-                    <a href="#" class="color-secondary text-decoration-none-one mb-auto">Read more<i
-                            class="bi bi-chevron-right ms-2"></i></a>
-                </div>
-                <div class="col-12 col-md-6">
-                    <img src="./images/unnamed-02.avif" alt="GE shop" class="rounded rounded-4 w-100 h-auto">
-                </div>
-                <div class="col-12 col-md-6 d-flex d-md-none flex-column pt-3">
-                    <small class="fw-bold fs-6 mt-auto">Investors</small>
-                    <div class="fs-3 text-opacity-75 text-dark pb-4 pt-3">Stay up to date on GE HealthCare’s plans for
-                        growth as a standalone company.</div>
-                    <a href="#" class="color-secondary text-decoration-none-one mb-auto">Read more<i
-                            class="bi bi-chevron-right ms-2"></i></a>
-                </div>
-            </div>
-            <div class="row py-4 flex-row">
-                <div class="col-12 col-md-6">
-                    <img src="./images/unnamed-03.avif" alt="GE shop" class="rounded rounded-4 w-100 h-auto">
-                </div>
-                <div class="col-12 col-md-6 d-flex flex-column">
-                    <small class="fw-bold fs-6 mt-md-auto mt-3">Career Opportunities</small>
-                    <div class="fs-3 text-opacity-75 text-dark pb-4 pt-3 py-md-4">Meet the team behind GE HealthCare’s
-                        innovations
-                        and growth and join us in our next era.</div>
-                    <a href="#" class="color-secondary text-decoration-none-one mb-auto">Read more<i
-                            class="bi bi-chevron-right ms-2"></i></a>
+                    <div class="row py-4 flex-row">
+                        <div class="col-12 col-md-6 d-none d-md-flex flex-column pe-md-5">
+                            <small class="fw-bold fs-6 mt-auto">Investors</small>
+                            <div class="fs-3 text-opacity-75 text-dark py-4 pe-md-4">Stay up to date on GE HealthCare’s
+                                plans
+                                for
+                                growth
+                                as a standalone company.</div>
+                            <a href="#" class="color-secondary text-decoration-none-one mb-auto">Read more<i
+                                    class="bi bi-chevron-right ms-2"></i></a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <img src="./images/unnamed-02.avif" alt="GE shop" class="rounded rounded-4 w-100 h-auto">
+                        </div>
+                        <div class="col-12 col-md-6 d-flex d-md-none flex-column pt-3">
+                            <small class="fw-bold fs-6 mt-auto">Investors</small>
+                            <div class="fs-3 text-opacity-75 text-dark pb-4 pt-3">Stay up to date on GE HealthCare’s
+                                plans
+                                for
+                                growth as a standalone company.</div>
+                            <a href="#" class="color-secondary text-decoration-none-one mb-auto">Read more<i
+                                    class="bi bi-chevron-right ms-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="row py-4 flex-row">
+                        <div class="col-12 col-md-6">
+                            <img src="./images/unnamed-03.avif" alt="GE shop" class="rounded rounded-4 w-100 h-auto">
+                        </div>
+                        <div class="col-12 col-md-6 d-flex flex-column ps-md-5">
+                            <small class="fw-bold fs-6 mt-md-auto mt-3 ps-md-4">Career Opportunities</small>
+                            <div class="fs-3 text-opacity-75 text-dark pb-4 pt-3 py-md-4 ps-md-4">Meet the team behind
+                                GE
+                                HealthCare’s
+                                innovations
+                                and growth and join us in our next era.</div>
+                            <a href="#" class="color-secondary text-decoration-none-one mb-auto ps-md-4">Learn more<i
+                                    class="bi bi-chevron-right ms-2"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
         <!-- Docuseries Section -->
         <section class="p-5 bg-fourth">
-            <img src="./images/dp-pic.avif" alt="Picture" class="dp-pic mb-2">
-            <div class="fs-2 pt-3 pt-md-4 pb-1">Docuseries: On the Frontlines</div>
-            <div class="col-12 col-md-9 fs-4 text-justify text-dark text-opacity-75 mb-5 mb-md-4">In this series,
-                filmmaker Mikey Kay reports
-                live from the field on the latest healthcare news and stories worldwide, from the ICUs of Europe to the
-                clinics of India.
-            </div>
+            <div class="warpper-one max-width-lg">
+                <div class="wrapper-two side-paddings">
+                    <img src="./images/dp-pic.avif" alt="Picture" class="dp-pic mb-2">
+                    <div class="fs-2 pt-3 pt-md-4 pb-1">Docuseries: On the Frontlines</div>
+                    <div class="col-12 col-md-9 fs-4 text-justify text-muted-one mb-5 mb-md-4">In this
+                        series,
+                        filmmaker Mikey Kay reports
+                        live from the field on the latest healthcare news and stories worldwide, from the ICUs of Europe
+                        to the
+                        clinics of India.
+                    </div>
 
 
-            <div class="w-100 h-auto pt-5 position-relative rounded-4 mb-5" onclick="playVideo()" role="button">
-                <img src="./images/large-video-thumbnail.avif" alt="Premiere"
-                    class="w-100 h-auto large-video-thumbnail rounded-4 overflow-hidden">
-                <div class="position-absolute top-50 start-50 translate-middle-x overflow-hidden">
-                    <i class="bi bi-play-btn-fill text-white fs-1 overflow-hidden p-0"></i>
-                </div>
-                <div class="text-white position-absolute top-100 start-0 pb-5 translate-middle-y">
-                    <div class="bg-2mins p-2 fw-small ms-4">2 mins</div>
-                </div>
-            </div>
-            <div class="row gx-3 gy-3 py-5">
-                <div class="col-12 col-lg-4 d-flex flex-column">
-                    <div role="button" class="card-without-css">
-                        <div class="zoomin-container rounded-4 overflow-hidden w-100">
-                            <img src="./images/videos-01.avif" alt="Making Ventilators"
-                                class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
+                    <div class="w-100 h-auto pt-5 position-relative rounded-4 mb-5" onclick="playVideo()" role="button">
+                        <img src="./images/large-video-thumbnail.avif" alt="Premiere"
+                            class="w-100 h-auto large-video-thumbnail rounded-4 overflow-hidden">
+                        <div class="position-absolute top-50 start-50 translate-middle-x overflow-hidden">
+                            <i class="bi bi-play-btn-fill text-white fs-1 overflow-hidden p-0"></i>
                         </div>
-                        <div class="pt-3 pb-1 py-md-4 text-justify">Making Ventilators in Madison: Ramping Up for Demand
+                        <div class="text-white position-absolute top-100 start-0 pb-5 translate-middle-y">
+                            <div class="bg-2mins p-2 fw-small ms-4">2 mins</div>
                         </div>
-                        <small class="fw-small">Season 1, Episode 1</small>
+                    </div>
+                    <div class="row gx-3 gy-3 py-5">
+                        <div class="col-12 col-lg-4 d-flex flex-column">
+                            <div role="button" class="card-without-css">
+                                <div class="zoomin-container rounded-4 overflow-hidden w-100">
+                                    <img src="./images/videos-01.avif" alt="Making Ventilators"
+                                        class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
+                                </div>
+                                <div class="pt-3 pb-1 py-md-4 text-justify">Making Ventilators in Madison: Ramping Up
+                                    for Demand
+                                </div>
+                                <small class="fw-small">Season 1, Episode 1</small>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex flex-column">
+                            <div role="button" class="card-without-css">
+                                <div class="zoomin-container rounded-4 overflow-hidden w-100">
+                                    <img src="./images/videos-02.avif" alt="Making Ventilators"
+                                        class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
+                                </div>
+                                <div class="pt-3 pb-1 py-md-4 text-justify">Making Ventilators in Madison: On the Line
+                                </div>
+                                <small class="fw-small">Season 1, Episode 2</small>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex flex-column">
+                            <div role="button" class="card-without-css">
+                                <div class="zoomin-container rounded-4 overflow-hidden w-100">
+                                    <img src="./images/videos-03.avif" alt="Making Ventilators"
+                                        class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
+                                </div>
+                                <div class="pt-3 pb-1 py-md-4 text-justify">Making Ventilators in Madison -
+                                    Manufacturing
+                                    Conditions Under
+                                    COVID-19</div>
+                                <small class="fw-small">Season 1, Episode 3</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-3 py-md-5">
+                        <a class="color-secondary text-decoration-none-one" href="#">Watch the full series <i
+                                class="bi bi-chevron-right ms-2"></i></a>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 d-flex flex-column">
-                    <div role="button" class="card-without-css">
-                        <div class="zoomin-container rounded-4 overflow-hidden w-100">
-                            <img src="./images/videos-02.avif" alt="Making Ventilators"
-                                class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
-                        </div>
-                        <div class="pt-3 pb-1 py-md-4 text-justify">Making Ventilators in Madison: On the Line</div>
-                        <small class="fw-small">Season 1, Episode 2</small>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4 d-flex flex-column">
-                    <div role="button" class="card-without-css">
-                        <div class="zoomin-container rounded-4 overflow-hidden w-100">
-                            <img src="./images/videos-03.avif" alt="Making Ventilators"
-                                class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
-                        </div>
-                        <div class="pt-3 pb-1 py-md-4 text-justify">Making Ventilators in Madison - Manufacturing
-                            Conditions Under
-                            COVID-19</div>
-                        <small class="fw-small">Season 1, Episode 3</small>
-                    </div>
-                </div>
-            </div>
-            <div class="py-3 py-md-5">
-                <a class="color-secondary text-decoration-none-one" href="#">Watch the full series <i
-                        class="bi bi-chevron-right ms-2"></i></a>
             </div>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer class="bg-fourth">
-        <div class="footer-wrapper-one p-5 pb-2">
-            <div class="fs-1 pb-3">Have a question? We would love to hear from you.</div>
-            <button class="btn btn-danger py-2 mb-5 fs-larger bg-first border-0 fw-bold">Contact us</button>
-            <div class="footer-address mb-5">
-                <div class="fw-bold">WIPRO GE HEALTHCARE PVT LTD</div>
-                <div class="">No. 4, Kadugodi Industrial Area,</div>
-                <div class="">Bangalore 560067,</div>
-                <div class="">Karnataka, India</div>
-                <div class="">CIN: U33111KA1990PTC01606</div>
-            </div>
-            <div class="my-5">JB79118IN</div>
-            <img src="./logo.svg" alt="logo" class="footer-logo mb-4">
-            <div class="footer-buttons row gx-2 gx-md-4 gy-3">
-                <a href="#" class="text-decoration-none-one text-dark w-auto text-start">Newsroom</a>
-                <a href="#" class="text-decoration-none-one text-dark w-auto text-start">Careers</a>
-                <a href="#" class="text-decoration-none-one text-dark w-auto text-start">Contact Us</a>
-                <a href="#" class="text-decoration-none-one text-dark w-auto text-start">Adverse Event Reporting</a>
-            </div>
-            <div class="row py-4">
-                <div class="col-4 flex-row d-flex">
-                    <i class="bi bi-globe me-2 my-auto"></i>
-                    <div class="my-auto">India</div>
-                    <small class="ms-2 fs-smaller bi bi-chevron-right my-auto"></small>
+        <div class="footer-wrapper-one p-5 pb-2 max-width-lg">
+            <div class="footer-wrapper-two side-paddings">
+                <div class="fs-1 pb-3">Have a question? We would love to hear from you.</div>
+                <button class="btn btn-danger py-2 mb-5 fs-larger bg-first border-0 fw-bold">Contact us</button>
+                <div class="footer-address mb-5">
+                    <div class="fw-bold">WIPRO GE HEALTHCARE PVT LTD</div>
+                    <div class="">No. 4, Kadugodi Industrial Area,</div>
+                    <div class="">Bangalore 560067,</div>
+                    <div class="">Karnataka, India</div>
+                    <div class="">CIN: U33111KA1990PTC01606</div>
                 </div>
-                <div class="col-4 offset-2 offset-lg-4 d-flex social incons">
-                    <div class="me-3" role="button"><i class="bi bi-facebook my-auto fs-3 fw-normal"></i></div>
-                    <div class="me-3" role="button"><i class="bi bi-instagram my-auto fs-3 fw-normal"></i></div>
-                    <div class="me-3" role="button"><i class="bi bi-twitter-x my-auto fs-3 fw-normal"></i></div>
-                    <div class="me-3" role="button"><i class="bi bi-linkedin my-auto fs-3 fw-normal"></i></div>
-                    <div class="me-3" role="button"><i class="bi bi-youtube my-auto fs-3 fw-normal"></i></div>
+                <div class="my-5">JB79118IN</div>
+                <img src="./logo.svg" alt="logo" class="footer-logo mb-4">
+                <div class="footer-buttons row gx-2 gx-md-4 gy-3">
+                    <a href="#" class="text-decoration-none-one text-dark w-auto text-start">Newsroom</a>
+                    <a href="#" class="text-decoration-none-one text-dark w-auto text-start">Careers</a>
+                    <a href="#" class="text-decoration-none-one text-dark w-auto text-start">Contact Us</a>
+                    <a href="#" class="text-decoration-none-one text-dark w-auto text-start">Adverse Event Reporting</a>
+                </div>
+                <div class="row py-4">
+                    <div class="col-4 flex-row d-flex">
+                        <i class="bi bi-globe me-2 my-auto"></i>
+                        <div class="my-auto">India</div>
+                        <small class="ms-2 fs-smaller bi bi-chevron-right my-auto"></small>
+                    </div>
+                    <div class="col-4 offset-2 offset-lg-4 d-flex social incons">
+                        <div class="me-3" role="button"><i class="bi bi-facebook my-auto fs-3 fw-normal"></i></div>
+                        <div class="me-3" role="button"><i class="bi bi-instagram my-auto fs-3 fw-normal"></i></div>
+                        <div class="me-3" role="button"><i class="bi bi-twitter-x my-auto fs-3 fw-normal"></i></div>
+                        <div class="me-3" role="button"><i class="bi bi-linkedin my-auto fs-3 fw-normal"></i></div>
+                        <div class="me-3" role="button"><i class="bi bi-youtube my-auto fs-3 fw-normal"></i></div>
+                    </div>
                 </div>
             </div>
         </div>
         <hr class="w-100 pt-2">
-        <div class="footer-wrapper-one side-paddings pb-5">
-            <div class="row">
-                <div class="col-12 col-md-8 pe-4 text-dark text-opacity-75">
+        <div class="footer-wrapper-one pb-5 max-width-lg">
+            <div class="row side-paddings">
+                <div class="col-12 col-md-8 pe-4 text-muted-one">
                     © 2025 GE HealthCare. GE Is A Trademark Of General Electric Company. Used Under Trademark License.
                 </div>
                 <div class="col-12 col-md-4 row h-auto pt-3 pt-md-0">
-                    <a href="#" class="col-6 text-dark text-opacity-75 text-decoration-none-one">Cookie Preferences</a>
-                    <a href="#" class="col-6 text-dark text-opacity-75 text-decoration-none-one">Privacy Policy</a>
-                    <a href="#" class="col-6 text-dark text-opacity-75 text-decoration-none-one">Terms and
+                    <a href="#" class="col-6 text-muted-one text-decoration-none-one">Cookie Preferences</a>
+                    <a href="#" class="col-6 text-muted-one text-decoration-none-one">Privacy Policy</a>
+                    <a href="#" class="col-6 text-muted-one text-decoration-none-one">Terms and
                         Conditions</a>
-                    <a href="#" class="col-6 text-dark text-opacity-75 text-decoration-none-one">Security</a>
+                    <a href="#" class="col-6 text-muted-one text-decoration-none-one">Security</a>
                 </div>
             </div>
         </div>
