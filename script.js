@@ -3,39 +3,60 @@ setTimeout(() => {
 }, 12000);
 
 function closePopup() {
-    const popup = document.getElementById("popup-country");
-    popup.classList.add("d-none");
+  const popup = document.getElementById("popup-country");
+  popup.classList.add("d-none");
 }
-
-function scrollToTheLeft() {
-  const elem = document.getElementById("scroll");
+const elemToListen = document.getElementById("scroll");
+elemToListen.addEventListener("scroll", () => {
   const btn = document.getElementById("leftScrollArrow");
+  const btnRight = document.getElementById("rightScrollArrow");
   const btn2 = document.getElementById("leftScrollArrow2");
-  elem.scrollTo({
-    left: elem.scrollLeft - elem.offsetWidth / 1.5,
-    behavior: "smooth",
-  });
-  if (elem.scrollLeft === 0) {
+  const btnRight2 = document.getElementById("rightScrollArrow2");
+  const maxScrollLeft = elemToListen.scrollWidth - elemToListen.clientWidth;
+
+  if (elemToListen.scrollLeft === 0) {
     btn.classList.add("disabled");
     btn2.classList.add("disabled"); // for the second arrow
     btn.setAttribute("disabled", "true");
     btn2.setAttribute("disabled", "true"); // for the second arrow
-  }
-}
-function scrollToTheRight() {
-  const elem = document.getElementById("scroll");
-  const btn = document.getElementById("leftScrollArrow");
-  const btn2 = document.getElementById("leftScrollArrow2");
-  elem.scrollTo({
-    left: elem.scrollLeft + elem.offsetWidth / 1.5,
-    behavior: "smooth",
-  });
-  if (elem.scrollLeft === 0) {
+  } else {
     btn.classList.remove("disabled");
     btn2.classList.remove("disabled"); // for the second arrow
     btn.removeAttribute("disabled");
     btn2.removeAttribute("disabled"); // for the second arrow
   }
+
+  if (elemToListen.scrollLeft === maxScrollLeft) {
+    btnRight.classList.add("disabled");
+    btnRight2.classList.add("disabled"); // for the second arrow
+    btnRight.setAttribute("disabled", "true");
+    btnRight2.setAttribute("disabled", "true"); // for the second arrow
+  } else {
+    btnRight.classList.remove("disabled");
+    btnRight2.classList.remove("disabled"); // for the second arrow
+    btnRight.removeAttribute("disabled");
+    btnRight2.removeAttribute("disabled"); // for the second arrow
+  }
+
+  // console.log("scrolling");
+});
+
+function scrollToTheLeft() {
+  const elem = document.getElementById("scroll");
+
+  elem.scrollTo({
+    left: elem.scrollLeft - elem.offsetWidth / 1.5,
+    behavior: "smooth",
+  });
+}
+
+function scrollToTheRight() {
+  const elem = document.getElementById("scroll");
+
+  elem.scrollTo({
+    left: elem.scrollLeft + elem.offsetWidth / 1.5,
+    behavior: "smooth",
+  });
 }
 
 var screenWidth = window.innerWidth;

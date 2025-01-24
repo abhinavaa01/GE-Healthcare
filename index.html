@@ -14,25 +14,28 @@
 
 <body class="w-100 overflow-x-hidden">
     <!-- Popup Country -->
-     <div class="w-100 bg-sixth overflow-hidden py-3 d-flex flex-column flex-lg-row" id="popup-country">
+    <div class="w-100 bg-sixth overflow-hidden py-3 d-flex flex-column flex-lg-row" id="popup-country">
         <div class="col-12 col-lg-6 text-start text-lg-center text-white fs-small-lg row p-2">
-            <div class="col-9 col-md-12 my-auto px-3">Select another country or region to view content specific to your location.</div>
+            <div class="col-9 col-md-12 my-auto px-3">Select another country or region to view content specific to your
+                location.</div>
             <span class="btn btn-close ms-auto d-lg-none my-auto" onclick="closePopup()"></span>
         </div>
         <div class="col-12 col-lg-6 d-flex flex-column flex-md-row">
             <div class="col-12 col-lg-6 px-2 my-auto">
                 <!-- country selector dropdown -->
-                 <select name="chooseCountry" id="chooseCountry" class="btn text-dark fw-bold w-100 border-0 bg-white my-auto">
+                <select name="chooseCountry" id="chooseCountry"
+                    class="btn text-dark fw-bold w-100 border-0 bg-white my-auto">
                     <option value="" disabled="true" selected>Select Country</option>
                     <option value="India">India</option>
-                 </select>
+                </select>
             </div>
             <div class="col-12 col-lg-6 py-2 px-2 d-flex flex-row">
-                <button class="btn text-white col-12 w-md-auto border-white py-1 me-md-3" onclick="closePopup()">Continue</button>
+                <button class="btn text-white col-12 w-md-auto border-white py-1 me-md-3"
+                    onclick="closePopup()">Continue</button>
                 <span class="btn btn-close d-none d-md-block me-auto my-auto" onclick="closePopup()"></span>
             </div>
         </div>
-     </div>
+    </div>
     <!-- Header / Navbar -->
     <header id="header" class="w-100">
         <div id="popup" class="pt-4 pb-2 bg-third text-white px-3">GE HealthCare will never ask for payment to process
@@ -125,16 +128,19 @@
     <!-- Carousel -->
     <main class="m-auto m-5">
         <section id="home" class="pb-5 bg-fourth">
-            <div id="video-container w-100 h-auto overflow-hidden">
-
-                <!-- <iframe allow="autoplay; fullscreen; picture-in-picture; camera; microphone; display-capture; clipboard-write" allowfullscreen="" allowtransparency="true" referrerpolicy="no-referrer-when-downgrade" class="vidyard-iframe-nZuhN16mNiJnc7542kqzHW" frameborder="0" height="100%" width="100%" scrolling="no" src="https://play.vidyard.com/nZuhN16mNiJnc7542kqzHW?disable_popouts=1&amp;v=4.3.15&amp;type=inline&amp;preload=auto&amp;hidden_controls=1&amp;muted=1&amp;autoplay=1" title="care-that-can-desktop" style="opacity: 1; background-color: transparent; position: absolute; top: 0px; left: 0px;"></iframe> -->
-                <iframe id="mainvideofirst"
-                    allow="autoplay; fullscreen; picture-in-picture; camera; microphone; display-capture; clipboard-write"
-                    allowfullscreen="" allowtransparency="true" width="1" height="1" loop="true"
-                    referrerpolicy="no-referrer-when-downgrade" class="vidyard-iframe-DRMzgsFprMVo4GXVN2San3"
-                    frameborder="0" width="100%" scrolling="no"
-                    src="https://play.vidyard.com/nZuhN16mNiJnc7542kqzHW?disable_popouts=1&amp;v=4.3.15&amp;type=inline&amp;preload=auto&amp;hidden_controls=1&amp;muted=1&amp;autoplay=1"
-                    title="purpose-desktop" style="opacity: 1; background-color: transparent;"></iframe>
+            <div class="position-relative w-100">
+                <div id="video-container w-100 h-auto overflow-hidden">
+                    <iframe id="mainvideofirst"
+                        allow="autoplay; fullscreen; picture-in-picture; camera; microphone; display-capture; clipboard-write"
+                        allowfullscreen="" allowtransparency="true" width="1" height="1" loop="true"
+                        referrerpolicy="no-referrer-when-downgrade" class="vidyard-iframe-DRMzgsFprMVo4GXVN2San3"
+                        frameborder="0" width="100%" scrolling="no"
+                        src="https://play.vidyard.com/nZuhN16mNiJnc7542kqzHW?disable_popouts=1&amp;v=4.3.15&amp;type=inline&amp;preload=auto&amp;hidden_controls=1&amp;muted=1&amp;autoplay=1"
+                        title="purpose-desktop" style="opacity: 1; background-color: transparent;"></iframe>
+                </div>
+                <div class="position-absolute bottom-0 end-0 transale-middle mb-5 me-5">
+                    <i class="bi bi-pause-circle-fill fs-1 text-white rounded-circle p-0"></i>
+                </div>
             </div>
             <div class="py-5 d-flex side-paddings">
                 <div class="w-auto me-auto text-dark">
@@ -144,15 +150,13 @@
                 </div>
                 <div class="w-auto ms-auto">
                     <span onclick="prevVideoCarousel()" role="button"
-                        class="bi bi-chevron-left fs-4 p-2 color-secondary"></span>
+                        class="bi bi-chevron-left fs-4 p-2 color-secondary margin-gap-16"></span>
                     <span onclick="nextVideoCarousel()" disabled="true" role="button"
                         class="bi bi-chevron-right fs-4 p-2 color-secondary rounded-circle border-secondary-one disabled"></span>
                 </div>
             </div>
             <h1 id="carousel-heading" class="side-paddings text-animate-fade">Care that can change the world</h1>
-            <div id="carousel-subheading" class="side-paddings text-animate-fade fs-6">Introducing GE HealthCare. An
-                independent healthcare technology and diagnostics company that puts our people and resources closer to
-                those who need them most.</div>
+            <div id="carousel-subheading" class="side-paddings text-animate-fade fs-6 text-dark text-opacity-75">Introducing GE HealthCare. An independent healthcare technology and diagnostics company that puts our people and resources closer to those who need them most.</div>
         </section>
 
         <!-- News and Insights Section -->
@@ -160,39 +164,39 @@
             <div class="w-100 overflow-hidden">
                 <h5 class="side-paddings mt-5 fw-bold fs-small-lg">News and Insights</h5>
                 <div class="row gx-3 side-paddings">
-                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
+                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2 px-md-4">
                         <div role="button" class="card-without-css row">
-                            <div class="zoomin-container col-4 col-lg-12">
+                            <div class="zoomin-container col-4 col-lg-12 px-0">
                                 <img src="./images/23049_GE2688.jpg" alt=""
-                                    class="w-100 insight-card-image zoomin-image">
+                                    class="w-100 insight-card-image zoomin-image overflow-hidden">
                             </div>
-                            <div class="col-8 col-lg-12 d-flex flex-column">
+                            <div class="col-8 col-lg-12 d-flex flex-column px-0">
                                 <div class="py-lg-4 text-justify fs-small-lg">Reflecting on a year of innovation at
                                     Verisound</div>
                                 <small class="fw-small">January 09, 2025</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
+                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2 px-md-4">
                         <div role="button" class="card-without-css row">
-                            <div class="zoomin-container col-4 col-lg-12">
+                            <div class="zoomin-container col-4 col-lg-12 px-0">
                                 <img src="./images/AI guided ultrasound.png" alt=""
                                     class="h-auto w-100 insight-card-image zoomin-image">
                             </div>
-                            <div class="col-8 col-lg-12 d-flex flex-column">
+                            <div class="col-8 col-lg-12 d-flex flex-column px-0">
                                 <div class="py-lg-4 text-justify fs-small-lg">AI-Guided Ultrasound: From Innovation to
                                     Impact</div>
                                 <small class="fw-small">January 02, 2025</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
+                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2 px-md-4">
                         <div role="button" class="card-without-css row">
-                            <div class="zoomin-container col-4 col-lg-12">
+                            <div class="zoomin-container col-4 col-lg-12 px-0">
                                 <img src="./images/career-ops-mobile.avif" alt=""
                                     class="h-auto w-100 insight-card-image zoomin-image">
                             </div>
-                            <div class="col-8 col-lg-12 d-flex flex-column">
+                            <div class="col-8 col-lg-12 d-flex flex-column px-0">
                                 <div class="py-lg-4 text-justify fs-small-lg">How agentic AI systems can solve the three
                                     most pressing
                                     problems in healthcare today</div>
@@ -200,13 +204,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2">
+                    <div class="col-12 col-lg-3 col-md-6 d-flex flex-column my-2 px-md-4">
                         <div role="button" class="card-without-css row">
-                            <div class="zoomin-container col-4 col-lg-12">
+                            <div class="zoomin-container col-4 col-lg-12 px-0">
                                 <img src="./images/RSNA AI Ultrasound Ryan.jpg" alt=""
                                     class="h-auto w-100 insight-card-image zoomin-image">
                             </div>
-                            <div class="col-8 col-lg-12 d-flex flex-column">
+                            <div class="col-8 col-lg-12 d-flex flex-column px-0">
                                 <div class="py-lg-4 text-justify fs-small-lg">Verisound at RSNA 2024: Shaping the future
                                     of radiology</div>
                                 <small class="fw-small">December 09, 2024</small>
@@ -286,12 +290,16 @@
             </div>
             <div class="w-100 position-relative">
                 <div class="position-absolute start-0 top-50 translate-middle pe-4 d-lg-none">
-                    <button id="leftScrollArrow2" class="btn categories-relative-button bg-secondary-one rounded-circle disabled" onclick="scrollToTheLeft()" disabled="true" role="button">
+                    <button id="leftScrollArrow2"
+                        class="btn categories-relative-button bg-secondary-one rounded-circle disabled"
+                        onclick="scrollToTheLeft()" disabled="true" role="button">
                         <span class="bi bi-chevron-left text-white"></span>
                     </button>
                 </div>
                 <div class="position-absolute start-100 top-50 translate-middle ps-4 d-lg-none">
-                    <button id="rightScrollArrow2" class="btn categories-relative-button bg-secondary-one rounded-circle" onclick="scrollToTheRight()" role="button">
+                    <button id="rightScrollArrow2"
+                        class="btn categories-relative-button bg-secondary-one rounded-circle"
+                        onclick="scrollToTheRight()" role="button">
                         <span class="bi bi-chevron-right text-white"></span>
                     </button>
                 </div>
