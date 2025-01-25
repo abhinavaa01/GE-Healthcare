@@ -2,10 +2,42 @@ setTimeout(() => {
   nextVideoCarousel();
 }, 12000);
 
+// change country
+function changeCountry(country) {
+  // console.log(e);
+  const countryName = document.getElementById("selectedCountry");
+  countryName.innerText = country;
+}
+
+// Drag to scrol element
+// const pos = {left: 0, x: 0};
+// const slider = document.getElementById('#scroll');
+
+// function mousemoveHandler(e) {
+//   const dx = e.clientX - pos.x;
+//   slider.scrollLeft = pos.left - dx;
+// };
+
+// function mouseupHandler() {
+//   document.removeEventListener('mousemove', mousemoveHandler);
+//   document.removeEventListener('mouseup', mouseupHandler);
+//   ele.style.cursor = 'grab';
+// };
+
+// slider.addEventListener('mousedown', (e) => {
+//   pos.left = slider.scrollLeft;
+//   pos.x = e.clientX;
+//   document.addEventListener('mousemove', mousemoveHandler);
+//   document.addEventListener('mouseup', mouseupHandler);
+// });
+
+// Close popup
 function closePopup() {
   const popup = document.getElementById("popup-country");
   popup.classList.add("d-none");
 }
+
+// Scroll button disable handler
 const elemToListen = document.getElementById("scroll");
 elemToListen.addEventListener("scroll", () => {
   const btn = document.getElementById("leftScrollArrow");
@@ -41,6 +73,7 @@ elemToListen.addEventListener("scroll", () => {
   // console.log("scrolling");
 });
 
+// Scroll to the left
 function scrollToTheLeft() {
   const elem = document.getElementById("scroll");
 
@@ -59,6 +92,7 @@ function scrollToTheRight() {
   });
 }
 
+// Video width handler
 var screenWidth = window.innerWidth;
 var screenHeight = window.innerHeight;
 function adjustIframeWidthAndHeight() {
@@ -140,4 +174,31 @@ function prevVideoCarousel() {
     countElem.innerText = "1";
     changeCarouselContent(0);
   }
+}
+
+// Choose topic UI change Handler
+function changeUI() {
+  // changing explaination
+  const header = document.getElementById("topic-heading");
+  header.innerText = "Ways we can Help You";
+  const options = document.getElementById("topic-clouds-container");
+  options.style.opacity = 0;
+
+  setTimeout(() => {
+    // changing the content
+    options.classList.add("d-none");
+    const cardsContainer = document.getElementById("topic-cards-container");
+    cardsContainer.classList.remove("d-none");
+    cardsContainer.style.opacity = 1;
+  }, 300);
+}
+
+function changeUI1() {
+  // change everything back
+  const option = document.getElementById("topic-heading");
+  option.innerText = "Choose a Topic";
+  const headings = document.getElementById("topic-subheading");
+  headings.classList.add("d-none");
+  const cardsContainer = document.getElementById("topic-cards-container");
+  cardsContainer.classList.add("d-none");
 }

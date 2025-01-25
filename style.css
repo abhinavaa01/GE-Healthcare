@@ -99,6 +99,10 @@ video {
   background-color: #fff;
   color: #222222;
   border: 1px solid #c7c8cf;
+  cursor: pointer;
+}
+.clouds-container div:hover {
+  border: 1px solid #6022a6;
 }
 
 /* Categories Section */
@@ -230,7 +234,19 @@ select {
 .text-muted-one {
   color: #5b5b67 !important;
 }
+.dropdown-toggle::after {
+  display: none !important;
+}
+.fs-smaller-one {
+  font-size: smaller !important;
+}
+.fs-tmd-small {
+  font-size: 1.5rem !important;
+}
 @media (max-width: 768px) {
+  .fs-tmd-small {
+    font-size: 1.15rem !important;
+  }
   .side-paddings {
     padding-right: 20px !important;
     padding-left: 20px !important;
