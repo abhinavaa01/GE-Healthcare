@@ -17,17 +17,17 @@
     <div class="w-100 bg-sixth overflow-y-visible py-3" id="popup-country">
         <div class="wrapper-one max-width-lg d-flex flex-column flex-lg-row">
             <div class="col-12 col-lg-6 text-start text-lg-center text-white fs-small-lg row p-2">
-                <div class="col-9 col-md-12 my-auto px-3">Select another country or region to view content specific to
+                <div class="col-9 col-lg-12 my-auto px-3">Select another country or region to view content specific to
                     your
                     location.</div>
                 <span class="btn btn-close btn-close-white ms-auto d-lg-none my-auto" onclick="closePopup()"></span>
             </div>
-            <div class="col-12 col-lg-6 d-flex flex-column flex-md-row">
+            <div class="col-12 col-lg-6 d-flex flex-column flex-lg-row">
                 <div class="col-12 col-lg-6 px-2 my-auto">
                     <!-- country selector dropdown -->
                     <div class="dropdown fw-bold w-100 border-0 rounded-1">
                         <button class="btn btn-light dropdown-toggle bg-white my-auto w-100 position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <span id="selectedCountry" class="text-dark fw-bold">Select Country </span><i class="bi bi-chevron-down ms-auto color-secondary position-absolute top-50 end-0 pe-2 pe-md-3 translate-middle"></i>
+                          <span id="selectedCountry" class="text-dark fw-bold">Select Country </span><i class="bi bi-chevron-down ms-auto color-secondary position-absolute top-50 end-0 pe-2 pe-lg-3 translate-middle"></i>
                         </button>
                         <ul class="dropdown-menu w-100 rounded-0">
                             <li class="dropdown-item country-dropdown-item" onclick="changeCountry('India')">India</li>
@@ -40,9 +40,9 @@
                       </div>
                 </div>
                 <div class="col-12 col-lg-6 py-2 px-2 d-flex flex-row">
-                    <button class="btn text-white col-12 w-md-auto border-white py-1 me-md-3"
+                    <button class="btn text-white col-12 w-lg-auto border-white py-1 me-lg-3"
                         onclick="closePopup()">Continue</button>
-                    <span class="btn btn-close btn-close-white d-none d-md-block me-auto my-auto" onclick="closePopup()"></span>
+                    <span class="btn btn-close btn-close-white d-none d-lg-block me-auto my-auto" onclick="closePopup()"></span>
                 </div>
             </div>
         </div>
@@ -141,7 +141,7 @@
     <main class="m-auto m-5">
         <section id="home" class="pb-5 bg-fourth w-100 overflow-hidden">
             <div class="position-relative w-100">
-                <div id="video-container w-100 h-auto overflow-hidden">
+                <div id="video-container" class="">
                     <iframe id="mainvideofirst"
                         allow="autoplay; fullscreen; picture-in-picture; camera; microphone; display-capture; clipboard-write"
                         allowfullscreen="" allowtransparency="true" width="1" height="1" loop="true"
@@ -151,7 +151,7 @@
                         title="purpose-desktop" style="opacity: 1; background-color: transparent;"></iframe>
                 </div>
                 <div class="position-absolute bottom-0 end-0 transale-middle mb-5 me-5">
-                    <i class="bi bi-pause fs-1 text-white rounded-circle p-0 bg-dark bg-opacity-50 py-2 px-3"></i>
+                    <i class="bi bi-pause fs-1 text-white rounded-circle p-0 bg-dark bg-opacity-50 py-2 px-3" id="playPauseButton"></i>
                 </div>
             </div>
             <div class="wrapper-one w-100 max-width-lg">

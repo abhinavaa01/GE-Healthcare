@@ -2,6 +2,19 @@ setTimeout(() => {
   nextVideoCarousel();
 }, 12000);
 
+// Video pause button handler 
+var iframe = document.getElementById('mainvideofirst');
+iframe.contentDocument.body.addEventListener("click", () => {
+  console.log("clicked");
+  // const elemArrayLength = document.getElementsByClassName("selectextShadowHost").length;
+  // const playBtn = document.getElementById("playPauseButton");
+  // if (elemArrayLength) {
+  //   playBtn.classList.replace("bi-pause", "bi-play-fill");
+  // } else {
+  //   playBtn.classList.replace("bi-play-fill", "bi-pause");
+  // }
+})
+
 // change country
 function changeCountry(country) {
   // console.log(e);
