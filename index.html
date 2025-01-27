@@ -184,7 +184,8 @@
                     and resources closer to those who need them most.
                 </div>
                 <a class="side-paddings text-decoration-none-one color-secondary fw-bold">
-                    <span id="carousel-link" class="text-animate-fade">Learn about the spin-off</span><i class="bi bi-chevron-right ms-2"></i>
+                    <span id="carousel-link" class="text-animate-fade">Learn about the spin-off</span><i
+                        class="bi bi-chevron-right ms-2"></i>
                 </a>
             </div>
         </section>
@@ -290,7 +291,7 @@
                     <div class="mx-auto text-uppercase fw-bold pt-3 pb-4 text-animate-fade" id="topic-heading">Choose a
                         Topic</div>
                     <a class="color-secondary text-decoration-none-one topic-section-backBtn mx-auto fs-tmd-small d-flex justify-content-center d-none"
-                        onclick="changeUI1()">
+                        id="topic-back-button" onclick="changeUI1()">
                         <i class="bi bi-chevron-left me-1 my-auto fs-smaller-one"></i>
                         <span class="px-0 my-auto">Back to Topics</span>
                     </a>
@@ -312,6 +313,64 @@
                     <div onclick="changeUI()">COVID-19</div>
                     <div onclick="changeUI()">Diversity</div>
                     <div onclick="changeUI()">Patient Experience</div>
+                </div>
+                <div id="topics-articles" class="d-flex flex-row overflow-x-scroll hide-scrollbar max-width-lg side-paddings w-100 d-none">
+                    <div class="card-three-container rounded-1 mx-auto me-3" role="button">
+                        <div class="card-three d-flex flex-column hover-border-secondary rounded-1">
+                            <div class="card-three-img-container zoomin-container delayed-animation w-100">
+                                <img src="./images/topics-01.avif" alt="Placeholder"
+                                    class="card-three-img w-100 h-auto">
+                            </div>
+                            <div class="card-three-body px-2 pt-3">
+                                <small class="card-three-title fw-bold">White Paper</small>
+                                <div class="card-three-p text-muted-one text-justify mb-5 mt-2">
+                                    The AI Effect: How AI is Making Healthcare More Human
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-three-container bg-white rounded-1 mx-auto me-3" role="button">
+                        <div class="card-three d-flex flex-column hover-border-secondary rounded-1">
+                            <div class="card-three-img-container zoomin-container delayed-animation w-100">
+                                <img src="./images/topics-02.avif" alt="Placeholder"
+                                    class="card-three-img w-100 h-auto">
+                            </div>
+                            <div class="card-three-body px-2 pt-3">
+                                <small class="card-three-title fw-bold">Solution</small>
+                                <div class="card-three-p text-muted-one text-justify mb-5 mt-2">
+                                    Edison AI Ecosystem
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-three-container bg-white rounded-1 mx-auto me-3" role="button">
+                        <div class="card-three d-flex flex-column hover-border-secondary rounded-1">
+                            <div class="card-three-img-container zoomin-container delayed-animation w-100">
+                                <img src="./images/topics-03.avif" alt="Placeholder"
+                                    class="card-three-img w-100 h-auto">
+                            </div>
+                            <div class="card-three-body px-2 pt-3">
+                                <small class="card-three-title fw-bold">Article</small>
+                                <div class="card-three-p text-muted-one text-justify mb-5 mt-2">
+                                    Growth in Hospital Command Centers
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-three-container bg-white rounded-1 mx-auto me-3" role="button">
+                        <div class="card-three d-flex flex-column hover-border-secondary rounded-1">
+                            <div class="card-three-img-container zoomin-container delayed-animation w-100">
+                                <img src="./images/topics-04.avif" alt="Placeholder"
+                                    class="card-three-img w-100 h-auto">
+                            </div>
+                            <div class="card-three-body px-2 pt-3">
+                                <small class="card-three-title fw-bold">Article</small>
+                                <div class="card-three-p text-muted-one text-justify mb-5 mt-2">
+                                    AI-embedded X-ray System Could Help Speed Up Detection of a Collapsed Lung
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -347,7 +406,7 @@
                         </div>
                         <div class="d-flex flex-row overflow-x-scroll hide-scrollbar w-100" id="scroll">
                             <div class="cards-one d-flex">
-                                <div class="card-one f-flex flex-column">
+                                <div class="card-one">
                                     <a href="" class="w-100 card-one-img-container">
                                         <img src="./images/imaging.avif" alt="Imaging" class="card-one-image">
                                     </a>
@@ -355,7 +414,7 @@
                                 </div>
                             </div>
                             <div class="cards-one d-flex">
-                                <div class="card-one f-flex flex-column">
+                                <div class="card-one">
                                     <a href="" class="w-100 card-one-img-container">
                                         <img src="./images/ultrasound.avif" alt="Ultrasound" class="card-one-image">
                                     </a>
@@ -363,7 +422,7 @@
                                 </div>
                             </div>
                             <div class="cards-one d-flex">
-                                <div class="card-one f-flex flex-column">
+                                <div class="card-one">
                                     <a href="" class="w-100 card-one-img-container">
                                         <img src="./images/healthcare.avif" alt="Healthcare" class="card-one-image">
                                     </a>
@@ -371,7 +430,7 @@
                                 </div>
                             </div>
                             <div class="cards-one d-flex">
-                                <div class="card-one f-flex flex-column">
+                                <div class="card-one">
                                     <a href="" class="w-100 card-one-img-container">
                                         <img src="./images/contrast.avif" alt="Contrast" class="card-one-image">
                                     </a>
@@ -379,7 +438,7 @@
                                 </div>
                             </div>
                             <div class="cards-one d-flex">
-                                <div class="card-one f-flex flex-column">
+                                <div class="card-one">
                                     <a href="" class="w-100 card-one-img-container">
                                         <img src="./images/anasthesia.avif" alt="Anesthesia" class="card-one-image">
                                     </a>
@@ -387,7 +446,7 @@
                                 </div>
                             </div>
                             <div class="cards-one d-flex">
-                                <div class="card-one f-flex flex-column">
+                                <div class="card-one">
                                     <a href="" class="w-100 card-one-img-container">
                                         <img src="./images/diagnostic.avif" alt="Diagnostic" class="card-one-image">
                                     </a>
@@ -395,7 +454,7 @@
                                 </div>
                             </div>
                             <div class="cards-one d-flex">
-                                <div class="card-one f-flex flex-column">
+                                <div class="card-one">
                                     <a href="" class="w-100 card-one-img-container">
                                         <img src="./images/maternal.avif" alt="Maternal" class="card-one-image">
                                     </a>
@@ -403,7 +462,7 @@
                                 </div>
                             </div>
                             <div class="cards-one d-flex">
-                                <div class="card-one f-flex flex-column">
+                                <div class="card-one">
                                     <a href="" class="w-100 card-one-img-container">
                                         <img src="./images/patient.avif" alt="Patient" class="card-one-image">
                                     </a>
@@ -411,7 +470,7 @@
                                 </div>
                             </div>
                             <div class="cards-one d-flex">
-                                <div class="card-one f-flex flex-column">
+                                <div class="card-one">
                                     <a href="" class="w-100 card-one-img-container">
                                         <img src="./images/ventilator.avif" alt="Ventilators" class="card-one-image">
                                     </a>
@@ -505,7 +564,9 @@
                     <div class="w-100 h-100 mt-5 position-relative rounded-4 mb-5" onclick="playVideo()" role="button">
                         <img src="./images/large-video-thumbnail.avif" alt="Premiere"
                             class="w-100 h-auto large-video-thumbnail rounded-4 overflow-hidden">
-                        <div class="h-100 w-100 position-absolute start-0 top-0 bg-transparent rounded-4 less-brightness"></div>
+                        <div
+                            class="h-100 w-100 position-absolute start-0 top-0 bg-transparent rounded-4 less-brightness">
+                        </div>
                         <div class="position-absolute top-50 start-50 translate-middle overflow-hidden">
                             <div class="position-relative">
                                 <i class="bi bi-play-btn-fill play-btn text-white overflow-hidden p-0"></i>
@@ -513,7 +574,8 @@
                         </div>
                         <div class="w-100 d-lg-block d-none position-absolute start-0 bottom-0 text-light px-5 pb-3">
                             <div class="d-flex flex-column px-4">
-                                <div class="Video-Title fs-1 w-75">Season 1 Premiere: On the Frontlines: Cancer Care in India</div>
+                                <div class="Video-Title fs-1 w-75">Season 1 Premiere: On the Frontlines: Cancer Care in
+                                    India</div>
                                 <div class="w-100 d-flex justify-content-between">
                                     <div>Season 1, Premiere</div>
                                     <div class="bg-2mins p-2 fw-small ms-4">2 mins</div>
@@ -528,7 +590,9 @@
                         <div class="col-12 col-lg-4 d-flex flex-column">
                             <div role="button" class="card-without-css">
                                 <div class="zoomin-container rounded-4 overflow-hidden w-100 position-relative">
-                                    <div class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">3 mins</div>
+                                    <div
+                                        class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">
+                                        3 mins</div>
                                     <img src="./images/videos-01.avif" alt="Making Ventilators"
                                         class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
                                 </div>
@@ -541,7 +605,9 @@
                         <div class="col-12 col-lg-4 d-flex flex-column">
                             <div role="button" class="card-without-css">
                                 <div class="zoomin-container rounded-4 overflow-hidden w-100 position-relative">
-                                    <div class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">3 mins</div>
+                                    <div
+                                        class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">
+                                        3 mins</div>
                                     <img src="./images/videos-02.avif" alt="Making Ventilators"
                                         class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
                                 </div>
@@ -553,7 +619,9 @@
                         <div class="col-12 col-lg-4 d-flex flex-column">
                             <div role="button" class="card-without-css">
                                 <div class="zoomin-container rounded-4 overflow-hidden w-100 position-relative">
-                                    <div class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">3 mins</div>
+                                    <div
+                                        class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">
+                                        3 mins</div>
                                     <img src="./images/videos-03.avif" alt="Making Ventilators"
                                         class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
                                 </div>

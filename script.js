@@ -2,8 +2,8 @@ setTimeout(() => {
   nextVideoCarousel();
 }, 12000);
 
-// Video pause button handler 
-var iframe = document.getElementById('mainvideofirst');
+// Video pause button handler
+var iframe = document.getElementById("mainvideofirst");
 iframe.contentDocument.body.addEventListener("click", () => {
   console.log("clicked");
   // const elemArrayLength = document.getElementsByClassName("selectextShadowHost").length;
@@ -13,7 +13,7 @@ iframe.contentDocument.body.addEventListener("click", () => {
   // } else {
   //   playBtn.classList.replace("bi-play-fill", "bi-pause");
   // }
-})
+});
 
 // change country
 function changeCountry(country) {
@@ -198,27 +198,37 @@ function prevVideoCarousel() {
 
 // Choose topic UI change Handler
 function changeUI() {
-  // changing explaination
   const header = document.getElementById("topic-heading");
-  header.innerText = "Ways we can Help You";
   const options = document.getElementById("topic-clouds-container");
+  const backbtn = document.getElementById("topic-back-button");
+  const articles = document.getElementById("topics-articles");
   options.style.opacity = 0;
 
+  // changing
   setTimeout(() => {
-    // changing the content
+    articles.style.opacity = 1;
+    backbtn.style.opacity = 1;
+    header.innerText = "Ways we can Help You";
     options.classList.add("d-none");
-    const cardsContainer = document.getElementById("topic-cards-container");
-    cardsContainer.classList.remove("d-none");
-    cardsContainer.style.opacity = 1;
+    backbtn.classList.remove("d-none");
+    articles.classList.remove("d-none");
   }, 300);
 }
 
 function changeUI1() {
+  const header = document.getElementById("topic-heading");
+  const options = document.getElementById("topic-clouds-container");
+  const backbtn = document.getElementById("topic-back-button");
+  const articles = document.getElementById("topics-articles");
+  articles.style.opacity = 0;
+  backbtn.style.opacity = 0;
+
   // change everything back
-  const option = document.getElementById("topic-heading");
-  option.innerText = "Choose a Topic";
-  const headings = document.getElementById("topic-subheading");
-  headings.classList.add("d-none");
-  const cardsContainer = document.getElementById("topic-cards-container");
-  cardsContainer.classList.add("d-none");
+  setTimeout(() => {
+    options.style.opacity = 1;
+    header.innerText = "Choose a Topic";
+    options.classList.remove("d-none");
+    backbtn.classList.add("d-none");
+    articles.classList.add("d-none");
+  }, 300);
 }
