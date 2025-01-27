@@ -165,6 +165,13 @@ video {
 .bg-2mins {
   backdrop-filter: brightness(0.4);
   border-radius: 10px;
+  color: #fff;
+}
+.bi-play-btn-fill.play-btn {
+  font-size: 5rem !important;
+}
+.less-brightness {
+  backdrop-filter: brightness(0.6);
 }
 
 /* Utilities */
@@ -216,6 +223,7 @@ video {
   padding-left: 24px !important;
 }
 .text-animate-fade {
+  opacity: 1;
   transition: all 0.3s ease-in-out;
 }
 .hide-scrollbar {
@@ -250,6 +258,10 @@ select {
   font-size: 1.5rem !important;
 }
 @media (max-width: 768px) {
+  .navbar-brand img {
+    width: 125px !important;
+    height: 28px !important;
+  }
   .fs-tmd-small {
     font-size: 1.15rem !important;
   }

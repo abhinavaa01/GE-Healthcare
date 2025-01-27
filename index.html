@@ -26,36 +26,43 @@
                 <div class="col-12 col-lg-6 px-2 my-auto">
                     <!-- country selector dropdown -->
                     <div class="dropdown fw-bold w-100 border-0 rounded-1">
-                        <button class="btn btn-light dropdown-toggle bg-white my-auto w-100 position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <span id="selectedCountry" class="text-dark fw-bold">Select Country </span><i class="bi bi-chevron-down ms-auto color-secondary position-absolute top-50 end-0 pe-2 pe-lg-3 translate-middle"></i>
+                        <button class="btn btn-light dropdown-toggle bg-white my-auto w-100 position-relative"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="selectedCountry" class="text-dark fw-bold">Select Country </span><i
+                                class="bi bi-chevron-down ms-auto color-secondary position-absolute top-50 end-0 pe-2 pe-lg-3 translate-middle"></i>
                         </button>
                         <ul class="dropdown-menu w-100 rounded-0">
                             <li class="dropdown-item country-dropdown-item" onclick="changeCountry('India')">India</li>
-                            <li class="dropdown-item country-dropdown-item" onclick="changeCountry('United States')">United States</li>
-                            <li class="dropdown-item country-dropdown-item" onclick="changeCountry('United Kingdom')">United Kingdom</li>
+                            <li class="dropdown-item country-dropdown-item" onclick="changeCountry('United States')">
+                                United States</li>
+                            <li class="dropdown-item country-dropdown-item" onclick="changeCountry('United Kingdom')">
+                                United Kingdom</li>
                             <li class="dropdown-item country-dropdown-item" onclick="changeCountry('India')">India</li>
-                            <li class="dropdown-item country-dropdown-item" onclick="changeCountry('United States')">United States</li>
-                            <li class="dropdown-item country-dropdown-item" onclick="changeCountry('United Kingdom')">United Kingdom</li>
+                            <li class="dropdown-item country-dropdown-item" onclick="changeCountry('United States')">
+                                United States</li>
+                            <li class="dropdown-item country-dropdown-item" onclick="changeCountry('United Kingdom')">
+                                United Kingdom</li>
                         </ul>
-                      </div>
+                    </div>
                 </div>
                 <div class="col-12 col-lg-6 py-2 px-2 d-flex flex-row">
                     <button class="btn text-white col-12 w-lg-auto border-white py-1 me-lg-3"
                         onclick="closePopup()">Continue</button>
-                    <span class="btn btn-close btn-close-white d-none d-lg-block me-auto my-auto" onclick="closePopup()"></span>
+                    <span class="btn btn-close btn-close-white d-none d-lg-block me-auto my-auto"
+                        onclick="closePopup()"></span>
                 </div>
             </div>
         </div>
 
     </div>
     <!-- Header / Navbar -->
-    <header id="header" class="w-100 w-100 overflow-hidden">
+    <header id="header" class="w-100 w-100">
         <div id="popupId" class="pt-4 pb-2 bg-third text-white px-3">GE HealthCare will never ask for payment to process
             documents, refer you to a third party to process applications or visas, or ask you to pay costs. Never send
             money to anyone suggesting they can provide employment with GE HealthCare. If you suspect you have received
             a fraudulent call, please fill out the form.</div>
         <nav class="navbar navbar-expand-lg bg-white w-100">
-            <div class="container-fluid w-100 w-md-auto my-3 max-width-lg">
+            <div class="container-fluid w-100 w-md-auto my-md-2 my-1 max-width-lg">
                 <a class="navbar-brand ms-2 me-auto" href="/"><img src="./logo.svg"></a>
                 <div class="mb-2 d-flex d-lg-none flex-row my-auto">
                     <div class="dropdown mx-2">
@@ -83,7 +90,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Products</a>
                         </li>
@@ -151,7 +158,8 @@
                         title="purpose-desktop" style="opacity: 1; background-color: transparent;"></iframe>
                 </div>
                 <div class="position-absolute bottom-0 end-0 transale-middle mb-5 me-5">
-                    <i class="bi bi-pause fs-1 text-white rounded-circle p-0 bg-dark bg-opacity-50 py-2 px-3" id="playPauseButton"></i>
+                    <i class="bi bi-pause fs-1 text-white rounded-circle p-0 bg-dark bg-opacity-50 py-2 px-3"
+                        id="playPauseButton"></i>
                 </div>
             </div>
             <div class="wrapper-one w-100 max-width-lg">
@@ -170,11 +178,14 @@
                 </div>
                 <h1 id="carousel-heading" class="side-paddings text-animate-fade title-m">Care that can change the world
                 </h1>
-                <div id="carousel-subheading" class="side-paddings text-animate-fade fs-6 text-muted-one">
+                <div id="carousel-subheading" class="side-paddings text-animate-fade fs-6 text-muted-one mb-5">
                     Introducing GE
                     HealthCare. An independent healthcare technology and diagnostics company that puts our people
                     and resources closer to those who need them most.
                 </div>
+                <a class="side-paddings text-decoration-none-one color-secondary fw-bold">
+                    <span id="carousel-link" class="text-animate-fade">Learn about the spin-off</span><i class="bi bi-chevron-right ms-2"></i>
+                </a>
             </div>
         </section>
 
@@ -276,15 +287,19 @@
             <div class="wrapper-one max-width-lg">
                 <div class="d-flex py-4 flex-column">
                     <div class="mx-auto round-number">1</div>
-                    <div class="mx-auto text-uppercase fw-bold pt-3 pb-4 text-animate-fade" id="topic-heading">Choose a Topic</div>
-                    <a class="color-secondary text-decoration-none-one topic-section-backBtn mx-auto fs-tmd-small d-flex justify-content-center d-none" onclick="changeUI1()">
+                    <div class="mx-auto text-uppercase fw-bold pt-3 pb-4 text-animate-fade" id="topic-heading">Choose a
+                        Topic</div>
+                    <a class="color-secondary text-decoration-none-one topic-section-backBtn mx-auto fs-tmd-small d-flex justify-content-center d-none"
+                        onclick="changeUI1()">
                         <i class="bi bi-chevron-left me-1 my-auto fs-smaller-one"></i>
                         <span class="px-0 my-auto">Back to Topics</span>
                     </a>
                     <div class="fs-1 text-center">I'd like to learn more about</div>
-                    <div class="w-50 mx-auto d-none" id="topic-impHeading">Helping you provide the best patient care possible</div>
+                    <div class="w-50 mx-auto d-none" id="topic-impHeading">Helping you provide the best patient care
+                        possible</div>
                 </div>
-                <div class="clouds-container row gx-3 side-paddings justify-content-center text-animate-fade" id="topic-clouds-container">
+                <div class="clouds-container row gx-3 side-paddings justify-content-center text-animate-fade"
+                    id="topic-clouds-container">
                     <div onclick="changeUI()">Artificial Intelligence</div>
                     <div onclick="changeUI()">Efficiency</div>
                     <div onclick="changeUI()">Innovation</div>
@@ -487,20 +502,33 @@
                     </div>
 
 
-                    <div class="w-100 h-auto pt-5 position-relative rounded-4 mb-5" onclick="playVideo()" role="button">
+                    <div class="w-100 h-100 mt-5 position-relative rounded-4 mb-5" onclick="playVideo()" role="button">
                         <img src="./images/large-video-thumbnail.avif" alt="Premiere"
                             class="w-100 h-auto large-video-thumbnail rounded-4 overflow-hidden">
-                        <div class="position-absolute top-50 start-50 translate-middle-x overflow-hidden">
-                            <i class="bi bi-play-btn-fill text-white fs-1 overflow-hidden p-0"></i>
+                        <div class="h-100 w-100 position-absolute start-0 top-0 bg-transparent rounded-4 less-brightness"></div>
+                        <div class="position-absolute top-50 start-50 translate-middle overflow-hidden">
+                            <div class="position-relative">
+                                <i class="bi bi-play-btn-fill play-btn text-white overflow-hidden p-0"></i>
+                            </div>
                         </div>
-                        <div class="text-white position-absolute top-100 start-0 pb-5 translate-middle-y">
+                        <div class="w-100 d-lg-block d-none position-absolute start-0 bottom-0 text-light px-5 pb-3">
+                            <div class="d-flex flex-column px-4">
+                                <div class="Video-Title fs-1 w-75">Season 1 Premiere: On the Frontlines: Cancer Care in India</div>
+                                <div class="w-100 d-flex justify-content-between">
+                                    <div>Season 1, Premiere</div>
+                                    <div class="bg-2mins p-2 fw-small ms-4">2 mins</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-white position-absolute top-100 start-0 pb-5 translate-middle-y d-lg-none">
                             <div class="bg-2mins p-2 fw-small ms-4">2 mins</div>
                         </div>
                     </div>
                     <div class="row gx-3 gy-3 py-5">
                         <div class="col-12 col-lg-4 d-flex flex-column">
                             <div role="button" class="card-without-css">
-                                <div class="zoomin-container rounded-4 overflow-hidden w-100">
+                                <div class="zoomin-container rounded-4 overflow-hidden w-100 position-relative">
+                                    <div class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">3 mins</div>
                                     <img src="./images/videos-01.avif" alt="Making Ventilators"
                                         class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
                                 </div>
@@ -512,7 +540,8 @@
                         </div>
                         <div class="col-12 col-lg-4 d-flex flex-column">
                             <div role="button" class="card-without-css">
-                                <div class="zoomin-container rounded-4 overflow-hidden w-100">
+                                <div class="zoomin-container rounded-4 overflow-hidden w-100 position-relative">
+                                    <div class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">3 mins</div>
                                     <img src="./images/videos-02.avif" alt="Making Ventilators"
                                         class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
                                 </div>
@@ -523,7 +552,8 @@
                         </div>
                         <div class="col-12 col-lg-4 d-flex flex-column">
                             <div role="button" class="card-without-css">
-                                <div class="zoomin-container rounded-4 overflow-hidden w-100">
+                                <div class="zoomin-container rounded-4 overflow-hidden w-100 position-relative">
+                                    <div class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">3 mins</div>
                                     <img src="./images/videos-03.avif" alt="Making Ventilators"
                                         class="insight-card-image zoomin-image rounded-4 w-100 h-auto">
                                 </div>

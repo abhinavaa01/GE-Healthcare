@@ -141,19 +141,26 @@ window.addEventListener("resize", () => {
 function changeCarouselContent(num) {
   const heading = document.getElementById("carousel-heading");
   const subheading = document.getElementById("carousel-subheading");
+  const link = document.getElementById("carousel-link");
   heading.style.opacity = 0;
   subheading.style.opacity = 0;
+  // console.log(link);
+  link.style.opacity = 0;
   setTimeout(() => {
     if (num) {
       heading.innerText = "GE HealthCare";
       subheading.innerText =
         "A new era of more precise, connected, and compassionate care.";
+      link.innerText = "Read more";
+      link.style.opacity = 1;
       heading.style.opacity = 1;
       subheading.style.opacity = 1;
     } else {
       heading.innerText = "Care that can change the world";
       subheading.innerText =
         "Introducing GE HealthCare. An independent healthcare technology and diagnostics company that puts our people and resources closer to those who need them most.";
+      link.innerText = "Learn about the spin-off";
+      link.style.opacity = 1;
       heading.style.opacity = 1;
       subheading.style.opacity = 1;
     }
