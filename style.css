@@ -162,6 +162,7 @@ video {
   object-fit: cover;
   border-radius: 10px;
   padding: 2px;
+  transition: box-shadow 0.3s ease-in-out;
 }
 @media (max-width: 768px) {
   .card-one-img-container img {
@@ -176,6 +177,7 @@ video {
   }
 }
 .card-one-img-container img:hover {
+  box-shadow: 0 10px 15px rgba(22, 41, 65, .15) !important;
   padding: 0;
   border: 2px solid #6022a6;
 }
@@ -293,7 +295,8 @@ select {
   border: 2px solid #6022a6;
 }
 .text-muted-little {
-  color: #f0f0f0 !important;
+  filter: brightness(0.85);
+  /* color: #e1dede !important; */
 }
 @media (max-width: 768px) {
   .navbar-brand img {

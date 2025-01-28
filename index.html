@@ -17,7 +17,7 @@
     <!-- Popup Country -->
     <div class="w-100 bg-sixth overflow-y-visible py-3" id="popup-country">
         <div class="wrapper-one max-width-lg d-flex flex-column flex-lg-row">
-            <div class="col-12 col-lg-6 text-start text-lg-center text-white fs-small-lg row p-2">
+            <div class="col-12 col-lg-6 text-start text-lg-center text-muted-little text-white fs-small-lg row p-2">
                 <div class="col-9 col-lg-12 my-auto px-3">Select another country or region to view content specific to
                     your
                     location.</div>
@@ -58,7 +58,8 @@
     </div>
     <!-- Header / Navbar -->
     <header id="header" class="w-100 w-100">
-        <div id="popupId" class="pt-4 pb-2 bg-third text-muted-little px-3">GE HealthCare will never ask for payment to process
+        <div id="popupId" class="pt-4 pb-2 bg-third text-muted-little text-white px-3">GE HealthCare will never ask for
+            payment to process
             documents, refer you to a third party to process applications or visas, or ask you to pay costs. Never send
             money to anyone suggesting they can provide employment with GE HealthCare. If you suspect you have received
             a fraudulent call, please fill out the form.</div>
@@ -150,10 +151,14 @@
         <section id="home" class="pb-5 bg-fourth w-100 overflow-hidden">
             <div class="position-relative w-100">
                 <div id="video-container" class="">
-                    <iframe data-custom_id="mainvideofirst" id="mainvideofirst" data-hidden_controls="1" data-autoplay="1"
+                    <iframe data-custom_id="mainvideofirst" id="mainvideofirst" data-hidden_controls="1"
+                        data-autoplay="1"
                         allow="autoplay; fullscreen; picture-in-picture; camera; microphone; display-capture; clipboard-write"
                         allowfullscreen="" allowtransparency="true" width="1" height="1" loop="true"
-                        referrerpolicy="no-referrer-when-downgrade" class="vidyard-iframe-nZuhN16mNiJnc7542kqzHW vidyard-player-embed" data-uuid="nZuhN16mNiJnc7542kqzHW" data-v="4" data-type="inline" frameborder="0" width="100%" scrolling="no"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="vidyard-iframe-nZuhN16mNiJnc7542kqzHW vidyard-player-embed"
+                        data-uuid="nZuhN16mNiJnc7542kqzHW" data-v="4" data-type="inline" frameborder="0" width="100%"
+                        scrolling="no"
                         src="https://play.vidyard.com/nZuhN16mNiJnc7542kqzHW?disable_popouts=1&v=4.3.15&type=inline&preload=auto&hidden_controls=1&muted=1&autoplay=1"
                         title="purpose-desktop" style="opacity: 1; background-color: transparent;"></iframe>
                     <!-- <img class="vidyard-player-embed" src="https://play.vidyard.com/nZuhN16mNiJnc7542kqzHW"
@@ -174,8 +179,9 @@
                     <div class="w-auto ms-auto">
                         <span onclick="prevVideoCarousel()" role="button"
                             class="bi bi-chevron-left fs-4 p-2 color-secondary margin-gap-16"></span>
-                        <span onclick="nextVideoCarousel()" disabled="true" role="button"
-                            class="bi bi-chevron-right fs-4 p-2 color-secondary rounded-circle border-secondary-one disabled"></span>
+                        <button class="rounded-circle bg-white border-secondary-one py-2">
+                            <span onclick="nextVideoCarousel()" disabled="true" role="button"
+                                class="bi bi-chevron-right fs-4 p-2 color-secondary"></span></button>
                     </div>
                 </div>
                 <h1 id="carousel-heading" class="side-paddings text-animate-fade title-m">Care that can change the world
@@ -251,7 +257,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="py-5 ps-5">
+                <div class="py-5 side-paddings">
                     <a class="color-secondary text-decoration-none-one" href="#">Insights <i
                             class="bi bi-chevron-right ms-2"></i></a>
                 </div>
@@ -647,7 +653,7 @@
 
     <!-- Footer Section -->
     <footer class="bg-fourth w-100 overflow-hidden">
-        <div class="footer-wrapper-one p-5 pb-2 max-width-lg">
+        <div class="footer-wrapper-one px-3 pb-2 max-width-lg">
             <div class="footer-wrapper-two side-paddings">
                 <div class="fs-1 pb-3">Have a question? We would love to hear from you.</div>
                 <button class="btn btn-danger py-2 mb-5 fs-larger bg-first border-0 fw-bold">Contact us</button>
