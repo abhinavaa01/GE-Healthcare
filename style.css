@@ -292,6 +292,9 @@ select {
 .hover-border-secondary:hover {
   border: 3px solid #6022a6;
 }
+.text-muted-little {
+  color: #f0f0f0 !important;
+}
 @media (max-width: 768px) {
   .navbar-brand img {
     width: 125px !important;
