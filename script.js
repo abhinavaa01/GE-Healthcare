@@ -2,18 +2,43 @@ setTimeout(() => {
   nextVideoCarousel();
 }, 12000);
 
-// Video pause button handler
-var iframe = document.getElementById("mainvideofirst");
-iframe.contentDocument.body.addEventListener("click", () => {
-  console.log("clicked");
-  // const elemArrayLength = document.getElementsByClassName("selectextShadowHost").length;
-  // const playBtn = document.getElementById("playPauseButton");
-  // if (elemArrayLength) {
-  //   playBtn.classList.replace("bi-pause", "bi-play-fill");
-  // } else {
-  //   playBtn.classList.replace("bi-play-fill", "bi-pause");
-  // }
-});
+window.onVidyardAPI = (vidyardEmbed) => {
+  vidyardEmbed.api.addReadyListener((_, player) => {
+    // console.log(player);
+    var button = document.getElementById("playPauseButton");
+    var video = VidyardV4.players[0];
+    // console.log(video);
+    var pause = 0;
+
+    // When the video is paused, change flag to 1 and add console message
+
+    video.on("pause", function () {
+      pause = 1;
+      console.log("video pause");
+      button.classList.replace("bi-pause", "bi-play-fill");
+    });
+
+    // When the video is first played or resumed, change flag to 0 and add console message.
+
+    video.on("play", function () {
+      pause = 0;
+      console.log("video resumed/play");
+      button.classList.replace("bi-play-fill", "bi-pause");
+    });
+
+    // When the button is clicked, check the flag and perform the appropriate action.
+
+    button.onclick = function () {
+      if (pause == 1) {
+        video.resume();
+      } else {
+        video.pause();
+      }
+      return false;
+    };
+  });
+};
+
 
 // change country
 function changeCountry(country) {
@@ -110,19 +135,22 @@ var screenWidth = window.innerWidth;
 var screenHeight = window.innerHeight;
 function adjustIframeWidthAndHeight() {
   if (screenWidth < 768) {
-    setIframeWidthAndHeight("100%", "400");
+    setIframeWidthAndHeight(screenWidth, 400);
   } else if (screenWidth < 1024) {
-    setIframeWidthAndHeight("100%", "600");
+    setIframeWidthAndHeight(screenWidth, 600);
   } else {
-    setIframeWidthAndHeight("100%", "540");
+    setIframeWidthAndHeight(screenWidth, 540);
   }
 }
 
 function setIframeWidthAndHeight(ww, hh) {
   //   console.log(ww, hh);
+  // const iframeElem = document.querySelectorAll(".vidyard-inner-container-DRMzgsFprMVo4GXVN2San3")[0] || document.querySelectorAll(".vidyard-inner-container-nZuhN16mNiJnc7542kqzHW")[0];
   const iframeElem = document.getElementById("mainvideofirst");
-  iframeElem.setAttribute("width", ww);
-  iframeElem.setAttribute("height", hh);
+  // console.log(iframeElem);
+  iframeElem.setAttribute("data-width", ww);
+  iframeElem.setAttribute("data-height", hh);
+  // iframeElem.style.height = hh;
 }
 
 adjustIframeWidthAndHeight();
@@ -169,31 +197,27 @@ function changeCarouselContent(num) {
 }
 
 function nextVideoCarousel() {
-  const videoCarousel = document.getElementById("mainvideofirst");
+  const videoCarousel = document.querySelectorAll("iframe")[0];
   const countElem = document.getElementById("currentVideo");
   vidUrlArray = videoCarousel.getAttribute("src").split("?");
   vidUrl = vidUrlArray[0];
-  if (vidUrl === "https://play.vidyard.com/nZuhN16mNiJnc7542kqzHW") {
-    vidUrlArray[0] = "https://play.vidyard.com/DRMzgsFprMVo4GXVN2San3";
-    newUrl = vidUrlArray.join("?");
-    videoCarousel.setAttribute("src", newUrl);
-    countElem.innerText = "2";
-    changeCarouselContent(1);
-  }
+  vidUrlArray[0] = "https://play.vidyard.com/DRMzgsFprMVo4GXVN2San3";
+  newUrl = vidUrlArray.join("?");
+  videoCarousel.setAttribute("src", newUrl);
+  countElem.innerText = "2";
+  changeCarouselContent(1);
 }
 
 function prevVideoCarousel() {
-  const videoCarousel = document.getElementById("mainvideofirst");
+  const videoCarousel = document.querySelectorAll("iframe")[0];
   const countElem = document.getElementById("currentVideo");
   vidUrlArray = videoCarousel.getAttribute("src").split("?");
   vidUrl = vidUrlArray[0];
-  if (vidUrl === "https://play.vidyard.com/DRMzgsFprMVo4GXVN2San3") {
-    vidUrlArray[0] = "https://play.vidyard.com/nZuhN16mNiJnc7542kqzHW";
-    newUrl = vidUrlArray.join("?");
-    videoCarousel.setAttribute("src", newUrl);
-    countElem.innerText = "1";
-    changeCarouselContent(0);
-  }
+  vidUrlArray[0] = "https://play.vidyard.com/nZuhN16mNiJnc7542kqzHW";
+  newUrl = vidUrlArray.join("?");
+  videoCarousel.setAttribute("src", newUrl);
+  countElem.innerText = "1";
+  changeCarouselContent(0);
 }
 
 // Choose topic UI change Handler
