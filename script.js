@@ -48,26 +48,26 @@ function changeCountry(country) {
 }
 
 // Drag to scrol element
-// const pos = {left: 0, x: 0};
-// const slider = document.getElementById('#scroll');
+const pos = {left: 0, x: 0};
+const slider = document.getElementById('scroll');
 
-// function mousemoveHandler(e) {
-//   const dx = e.clientX - pos.x;
-//   slider.scrollLeft = pos.left - dx;
-// };
+function mousemoveHandler(e) {
+  const dx = e.clientX - pos.x;
+  slider.scrollLeft = pos.left - dx;
+};
 
-// function mouseupHandler() {
-//   document.removeEventListener('mousemove', mousemoveHandler);
-//   document.removeEventListener('mouseup', mouseupHandler);
-//   ele.style.cursor = 'grab';
-// };
+function mouseupHandler() {
+  document.removeEventListener('mousemove', mousemoveHandler);
+  document.removeEventListener('mouseup', mouseupHandler);
+  ele.style.cursor = 'grab';
+};
 
-// slider.addEventListener('mousedown', (e) => {
-//   pos.left = slider.scrollLeft;
-//   pos.x = e.clientX;
-//   document.addEventListener('mousemove', mousemoveHandler);
-//   document.addEventListener('mouseup', mouseupHandler);
-// });
+slider.addEventListener('mousedown', (e) => {
+  pos.left = slider.scrollLeft;
+  pos.x = e.clientX;
+  document.addEventListener('mousemove', mousemoveHandler);
+  document.addEventListener('mouseup', mouseupHandler);
+});
 
 // Close popup
 function closePopup() {
