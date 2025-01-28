@@ -3,6 +3,10 @@
   font-family: "Source Sans Pro";
   src: url(./fonts/SourceSansPro-Regular.ttf);
 }
+@font-face {
+  font-family: "Source Sans Pro - bold";
+  src: url(./fonts/SourceSansPro-Bold.ttf);
+}
 
 /* Body */
 body {
@@ -13,6 +17,9 @@ body {
   max-width: 1200px !important;
   margin-right: auto !important;
   margin-left: auto !important;
+}
+.fw-boldfont {
+  font-family: "Source Sans Pro - bold", "Source Han Sans", sans-serif !important;
 }
 
 /* Popup Country */
@@ -177,7 +184,7 @@ video {
   }
 }
 .card-one-img-container img:hover {
-  box-shadow: 0 10px 15px rgba(22, 41, 65, .15) !important;
+  box-shadow: 0 10px 15px rgba(22, 41, 65, 0.15) !important;
   padding: 0;
   border: 2px solid #6022a6;
 }
@@ -367,4 +374,16 @@ select {
   .w-lg-auto {
     width: auto !important;
   }
+}
+@media (min-width: 960px) {
+  .manual-title-font {
+    font-size: 2.25rem !important;
+    line-height: 3rem !important;
+    letter-spacing: -1.25px !important;
+  }
+}
+.manual-title-font {
+  font-size: 1.625rem !important;
+  line-height: 2rem !important;
+  letter-spacing: -0.75px !important;
 }
