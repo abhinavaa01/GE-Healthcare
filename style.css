@@ -286,11 +286,11 @@ select {
   font-size: 1.5rem !important;
 }
 .hover-border-secondary {
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   transition: all 0.3s ease-in-out;
 }
 .hover-border-secondary:hover {
-  border: 3px solid #6022a6;
+  border: 2px solid #6022a6;
 }
 .text-muted-little {
   color: #f0f0f0 !important;
