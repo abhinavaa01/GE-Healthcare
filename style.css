@@ -253,8 +253,7 @@ video {
   padding-left: 24px !important;
 }
 .text-animate-fade {
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .hide-scrollbar {
   scrollbar-width: none;

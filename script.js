@@ -226,12 +226,23 @@ function changeUI() {
   const options = document.getElementById("topic-clouds-container");
   const backbtn = document.getElementById("topic-back-button");
   const articles = document.getElementById("topics-articles");
+  const subHeading = document.getElementById("topic-impHeading");
+
+  // animations
+  header.style.opacity = 0;
   options.style.opacity = 0;
+  backbtn.style.opacity = 0;
+  articles.style.opacity = 0;
+  subHeading.style.opacity = 0;
+
 
   // changing
   setTimeout(() => {
+    header.style.opacity = 1;
     articles.style.opacity = 1;
     backbtn.style.opacity = 1;
+    subHeading.style.opacity = 1;
+    subHeading.innerText = "Helping you provide the best patient care possible";
     header.innerText = "Ways we can Help You";
     options.classList.add("d-none");
     backbtn.classList.remove("d-none");
@@ -244,15 +255,25 @@ function changeUI1() {
   const options = document.getElementById("topic-clouds-container");
   const backbtn = document.getElementById("topic-back-button");
   const articles = document.getElementById("topics-articles");
-  articles.style.opacity = 0;
+  const subHeading = document.getElementById("topic-impHeading");
+
+
+  // animations
+  header.style.opacity = 0;
+  options.style.opacity = 0;
   backbtn.style.opacity = 0;
+  articles.style.opacity = 0;
+  subHeading.style.opacity = 0;
 
   // change everything back
   setTimeout(() => {
+    header.style.opacity = 1;
     options.style.opacity = 1;
+    subHeading.style.opacity = 1;
     header.innerText = "Choose a Topic";
-    options.classList.remove("d-none");
+    subHeading.innerText = "I'd like to learn more about";
     backbtn.classList.add("d-none");
     articles.classList.add("d-none");
+    options.classList.remove("d-none");
   }, 300);
 }
