@@ -326,6 +326,9 @@ select {
   .fs-tmd-small {
     font-size: 1.15rem !important;
   }
+  .w-tmd-100 {
+    width: 100% !important;
+  }
   .side-paddings {
     padding-right: 20px !important;
     padding-left: 20px !important;
