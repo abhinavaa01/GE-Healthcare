@@ -39,7 +39,6 @@ window.onVidyardAPI = (vidyardEmbed) => {
   });
 };
 
-
 // change country
 function changeCountry(country) {
   // console.log(e);
@@ -48,25 +47,25 @@ function changeCountry(country) {
 }
 
 // Drag to scrol element
-const pos = {left: 0, x: 0};
-const slider = document.getElementById('scroll');
+const pos = { left: 0, x: 0 };
+const slider = document.getElementById("scroll");
 
 function mousemoveHandler(e) {
   const dx = e.clientX - pos.x;
   slider.scrollLeft = pos.left - dx;
-};
+}
 
 function mouseupHandler() {
-  document.removeEventListener('mousemove', mousemoveHandler);
-  document.removeEventListener('mouseup', mouseupHandler);
-  ele.style.cursor = 'grab';
-};
+  document.removeEventListener("mousemove", mousemoveHandler);
+  document.removeEventListener("mouseup", mouseupHandler);
+  ele.style.cursor = "grab";
+}
 
-slider.addEventListener('mousedown', (e) => {
+slider.addEventListener("mousedown", (e) => {
   pos.left = slider.scrollLeft;
   pos.x = e.clientX;
-  document.addEventListener('mousemove', mousemoveHandler);
-  document.addEventListener('mouseup', mouseupHandler);
+  document.addEventListener("mousemove", mousemoveHandler);
+  document.addEventListener("mouseup", mouseupHandler);
 });
 
 // Close popup
@@ -235,7 +234,6 @@ function changeUI() {
   articles.style.opacity = 0;
   subHeading.style.opacity = 0;
 
-
   // changing
   setTimeout(() => {
     header.style.opacity = 1;
@@ -257,7 +255,6 @@ function changeUI1() {
   const articles = document.getElementById("topics-articles");
   const subHeading = document.getElementById("topic-impHeading");
 
-
   // animations
   header.style.opacity = 0;
   options.style.opacity = 0;
@@ -277,3 +274,44 @@ function changeUI1() {
     options.classList.remove("d-none");
   }, 300);
 }
+
+function playVideo() {
+  const thumbnail = document.getElementById("largeThumbnail");
+  const hh = thumbnail.clientHeight;
+  const ww = thumbnail.clientWidth;
+
+  const youtubeIframe = document.getElementById("largeyoutubeiframe");
+  youtubeIframe.setAttribute(
+    "src",
+    youtubeIframe.getAttribute("src") + "?autoplay=1"
+  );
+  youtubeIframe.setAttribute("height", hh);
+  youtubeIframe.setAttribute("width", ww);
+  thumbnail.classList.add("d-none");
+  youtubeIframe.classList.remove("d-none");
+}
+
+function playYoutubeDialog(id) {
+  const screenWidth = window.innerWidth;
+  var ww = screenWidth <= 768 ? 0.9 * screenWidth : 0.8 * screenWidth;
+  var hh = 0.5625 * ww;
+  const modal = document.getElementById("playModal");
+  const iframe = document.getElementById("modalIframe");
+  // const url = "https://www.youtube.com/embed/" + "wKopiOG7f28" + "?autoplay=1";
+  // iframe.setAttribute("src", url);
+  iframe.setAttribute("height", hh);
+  iframe.setAttribute("width", ww);
+  modal.showModal();
+}
+
+const myDialog = document.getElementById("playModal");
+myDialog.addEventListener("click", () => {
+  const iframe = document.getElementById("modalIframe");
+  const srcvar = iframe.getAttribute("src")
+  iframe.setAttribute("src", "");
+  myDialog.close();
+  iframe.setAttribute("src", srcvar);
+});
+
+const myDiv = document.getElementById("modalIframe");
+myDiv.addEventListener("click", (event) => event.stopPropagation());

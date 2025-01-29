@@ -551,7 +551,7 @@
         <!--  -->
         <!--  -->
         <!-- Docuseries Section -->
-        <section class="p-5 bg-fourth w-100 overflow-hidden">
+        <section class="py-5 bg-fourth w-100 overflow-hidden">
             <div class="warpper-one max-width-lg">
                 <div class="wrapper-two side-paddings">
                     <img src="./images/dp-pic.avif" alt="Picture" class="dp-pic mb-2">
@@ -565,15 +565,12 @@
                     </div>
 
 
-                    <div class="w-100 h-100 mt-5 position-relative rounded-4 mb-5" onclick="playVideo()" role="button">
+                    <div class="w-100 h-100 mt-5 position-relative rounded-4 mb-4 mb-lg-5" onclick="playVideo()" role="button" id="largeThumbnail">
                         <img src="./images/large-video-thumbnail.avif" alt="Premiere"
                             class="w-100 h-auto large-video-thumbnail rounded-4 overflow-hidden">
-                        <div
-                            class="h-100 w-100 position-absolute start-0 top-0 bg-transparent rounded-4 less-brightness">
-                        </div>
                         <div class="position-absolute top-50 start-50 translate-middle overflow-hidden">
-                            <div class="position-relative">
-                                <i class="bi bi-play-btn-fill play-btn text-white overflow-hidden p-0"></i>
+                            <div class="position-relative px-3 py-1 px-lg-4 py-lg-3 rounded-3 bg-white">
+                                <i class="bi bi-play-fill play-btn color-secondary overflow-hidden p-0 fs-3"></i>
                             </div>
                         </div>
                         <div class="w-100 d-lg-block d-none position-absolute start-0 bottom-0 text-light px-5 pb-3">
@@ -590,9 +587,19 @@
                             <div class="bg-2mins p-2 fw-small ms-4">2 mins</div>
                         </div>
                     </div>
+                    <iframe width="1440" height="1080" class="w-100 mt-5 position-relative rounded-4 mb-4 mb-lg-5 d-none" id="largeyoutubeiframe" src="https://www.youtube.com/embed/7o56jUQAuy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="d-block d-lg-none mb-5">
+                        <div class="fs-4">Season 1 Premiere: On the Frontlines: Cancer Care in India</div>
+                        <small>Season 1, Premiere</small>
+                    </div>
+
+                    <dialog id="playModal" class="playModal overflow-hidden rounded-3" onclick="">
+                        <iframe width="560" id="modalIframe" class="rounded-3" height="800" src="https://www.youtube.com/embed/wKopiOG7f28?si=1gGUGl3tzrOwWQq1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </dialog>
+
                     <div class="row gx-3 gy-3 pb-5">
                         <div class="col-12 col-lg-4 d-flex flex-column">
-                            <div role="button" class="card-without-css">
+                            <div role="button" class="card-without-css" onclick="playYoutubeDialog()">
                                 <div class="zoomin-container rounded-4 overflow-hidden w-100 position-relative">
                                     <div
                                         class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">
@@ -607,7 +614,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-4 d-flex flex-column">
-                            <div role="button" class="card-without-css">
+                            <div role="button" class="card-without-css" onclick="playYoutubeDialog()">
                                 <div class="zoomin-container rounded-4 overflow-hidden w-100 position-relative">
                                     <div
                                         class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">
@@ -621,7 +628,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-4 d-flex flex-column">
-                            <div role="button" class="card-without-css">
+                            <div role="button" class="card-without-css" onclick="playYoutubeDialog()">
                                 <div class="zoomin-container rounded-4 overflow-hidden w-100 position-relative">
                                     <div
                                         class="position-absolute start-0 bottom-0 mb-2 ms-2 bg-2mins fs-smaller px-2 py-1">

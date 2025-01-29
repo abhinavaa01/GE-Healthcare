@@ -21,6 +21,10 @@ body {
 .fw-boldfont {
   font-family: "Source Sans Pro - bold", "Source Han Sans", sans-serif !important;
 }
+body:has(dialog[open]) {
+  filter: blur(3px);
+  overflow: hidden;
+}
 
 /* Popup Country */
 /* #popup-country {
@@ -63,7 +67,7 @@ video {
   overflow: hidden;
 }
 .insight-card-image {
-  aspect-ratio: 2/1 !important;
+  aspect-ratio: 16/9 !important;
   object-fit: cover !important;
 }
 .zoomin-container img:hover {
@@ -207,6 +211,16 @@ video {
 .less-brightness {
   backdrop-filter: brightness(0.6);
 }
+.large-video-thumbnail {
+  min-height: 180px;
+}
+.playModal {
+  padding: 0 !important;
+  border: 0 !important;
+  width: min-content !important;
+  height: min-content;
+  background: rgba(0, 0, 0, 0);
+}
 
 /* Utilities */
 .text-bold {
@@ -329,10 +343,6 @@ select {
   }
   .footer-buttons a {
     width: 50% !important;
-  }
-  .insight-card-image {
-    aspect-ratio: 1/1 !important;
-    object-fit: cover !important;
   }
 }
 @media (min-width: 768px) {
