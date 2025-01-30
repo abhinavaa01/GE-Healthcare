@@ -95,12 +95,14 @@ elemToListen.addEventListener("scroll", () => {
     btn2.removeAttribute("disabled"); // for the second arrow
   }
 
-  if (elemToListen.scrollLeft === maxScrollLeft) {
+  if (elemToListen.scrollLeft >= maxScrollLeft-20) {
+    // console.log(1);
     btnRight.classList.add("disabled");
     btnRight2.classList.add("disabled"); // for the second arrow
     btnRight.setAttribute("disabled", "true");
     btnRight2.setAttribute("disabled", "true"); // for the second arrow
   } else {
+    // console.log(2);
     btnRight.classList.remove("disabled");
     btnRight2.classList.remove("disabled"); // for the second arrow
     btnRight.removeAttribute("disabled");
@@ -226,6 +228,7 @@ function changeUI() {
   const backbtn = document.getElementById("topic-back-button");
   const articles = document.getElementById("topics-articles");
   const subHeading = document.getElementById("topic-impHeading");
+  const numbering = document.getElementById("topicNumbering");
 
   // animations
   header.style.opacity = 0;
@@ -240,6 +243,7 @@ function changeUI() {
     articles.style.opacity = 1;
     backbtn.style.opacity = 1;
     subHeading.style.opacity = 1;
+    numbering.innerText = 2;
     subHeading.innerText = "Helping you provide the best patient care possible";
     header.innerText = "Ways we can Help You";
     options.classList.add("d-none");
@@ -254,6 +258,7 @@ function changeUI1() {
   const backbtn = document.getElementById("topic-back-button");
   const articles = document.getElementById("topics-articles");
   const subHeading = document.getElementById("topic-impHeading");
+  const numbering = document.getElementById("topicNumbering");
 
   // animations
   header.style.opacity = 0;
@@ -267,6 +272,7 @@ function changeUI1() {
     header.style.opacity = 1;
     options.style.opacity = 1;
     subHeading.style.opacity = 1;
+    numbering.innerText = 1;
     header.innerText = "Choose a Topic";
     subHeading.innerText = "I'd like to learn more about";
     backbtn.classList.add("d-none");
