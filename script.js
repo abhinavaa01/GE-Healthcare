@@ -1,6 +1,4 @@
-setTimeout(() => {
-  nextVideoCarousel();
-}, 12000);
+
 
 window.onVidyardAPI = (vidyardEmbed) => {
   vidyardEmbed.api.addReadyListener((_, player) => {
@@ -39,6 +37,21 @@ window.onVidyardAPI = (vidyardEmbed) => {
   });
 };
 
+
+// offcanvas height handler
+function handleOffcanvasHeight() {
+  const vw = window.innerHeight;
+  const h1 = document.getElementById("popup-country").clientHeight;
+  const h2 = document.getElementById("header").clientHeight;
+  const gap = h1+h2;
+  const hh = vw - gap;
+
+  const offcanvasElement = document.getElementById("offcanvasExample");
+  offcanvasElement.style.setProperty("--bs-offcanvas-height", (hh + 2) + "px");
+  // offcanvasElement.style.height = hh;
+}
+handleOffcanvasHeight();
+
 // change country
 function changeCountry(country) {
   // console.log(e);
@@ -68,10 +81,16 @@ slider.addEventListener("mousedown", (e) => {
   document.addEventListener("mouseup", mouseupHandler);
 });
 
+
+setTimeout(() => {
+  nextVideoCarousel();
+}, 12000);
+
 // Close popup
 function closePopup() {
   const popup = document.getElementById("popup-country");
   popup.classList.add("d-none");
+  handleOffcanvasHeight();
 }
 
 // Scroll button disable handler

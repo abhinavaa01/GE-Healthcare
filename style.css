@@ -40,16 +40,16 @@ body:has(dialog[open]) {
 .dropdown-item:active {
   background-color: white !important;
 }
-.dropdown:has(.search-dropdown) {
+.dropdown:has(.search-dropdown), .dropdown-css:has(.search-dropdown) {
   border-bottom: 3px solid transparent;
 }
-.dropdown:has(.search-dropdown.show) {
+.dropdown:has(.search-dropdown.show), .dropdown-css:has(.search-dropdown.show) {
   border-bottom: 3px solid #6022a6;
   color: #6022a6 !important;
 }
 .dropdown-search-input-sm {
   height: 44px !important;
-  width: 225px !important;
+  width: 100% !important;
   background-color: #FBF9FD;
   border: 1px solid #C7C8CF;
 }
@@ -58,6 +58,22 @@ body:has(dialog[open]) {
   width: 325px !important;
   background-color: #FBF9FD;
   border: 1px solid #C7C8CF;
+}
+#offcanvasExample {
+  max-width: 100vw !important;
+  width: 768px;
+  /* height: 500px; */
+}
+.offcanvas-bottom {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+}
+.offcanvas-bottom.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
 }
 
 /* carousal Section */
