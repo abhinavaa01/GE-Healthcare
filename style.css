@@ -47,6 +47,12 @@ body:has(dialog[open]) {
   border-bottom: 3px solid #6022a6;
   color: #6022a6 !important;
 }
+.dropdown-search-input-sm {
+  height: 44px !important;
+  width: 225px !important;
+  background-color: #FBF9FD;
+  border: 1px solid #C7C8CF;
+}
 .dropdown-search-input {
   height: 44px !important;
   width: 325px !important;
