@@ -299,8 +299,8 @@ function playVideo() {
 
 function playYoutubeDialog(id) {
   const screenWidth = window.innerWidth;
-  var ww = screenWidth <= 768 ? 0.9 * screenWidth : 0.8 * screenWidth;
-  var hh = 0.5625 * ww;
+  var ww = screenWidth <= 768 ? 0.9 * screenWidth : 0.6 * screenWidth;
+  var hh = 0.5625 * ww; // 16/9 ratio
   const modal = document.getElementById("playModal");
   const iframe = document.getElementById("modalIframe");
   // const url = "https://www.youtube.com/embed/" + "wKopiOG7f28" + "?autoplay=1";

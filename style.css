@@ -22,7 +22,7 @@ body {
   font-family: "Source Sans Pro - bold", "Source Han Sans", sans-serif !important;
 }
 body:has(dialog[open]) {
-  filter: brightness(0.7);
+  filter: brightness(0.5);
   overflow: hidden;
 }
 
