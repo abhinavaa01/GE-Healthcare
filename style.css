@@ -40,8 +40,18 @@ body:has(dialog[open]) {
 .dropdown-item:active {
   background-color: white !important;
 }
-.search-dropdown.show {
+.dropdown:has(.search-dropdown) {
+  border-bottom: 3px solid transparent;
+}
+.dropdown:has(.search-dropdown.show) {
   border-bottom: 3px solid #6022a6;
+  color: #6022a6 !important;
+}
+.dropdown-search-input {
+  height: 44px !important;
+  width: 325px !important;
+  background-color: #FBF9FD;
+  border: 1px solid #C7C8CF;
 }
 
 /* carousal Section */
@@ -181,10 +191,13 @@ video {
   width: 40px;
   height: 40px;
 }
+.categories-relative-button {
+  color: white;
+}
 .categories-slide-button.disabled,
 .categories-relative-button.disabled {
   color: #c7c8cf !important;
-  background-color: #b4b4bf !important;
+  background-color: whitesmoke !important;
 }
 .cards-one {
   margin-right: 1rem;

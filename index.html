@@ -63,21 +63,21 @@
             documents, refer you to a third party to process applications or visas, or ask you to pay costs. Never send
             money to anyone suggesting they can provide employment with GE HealthCare. If you suspect you have received
             a fraudulent call, <a href="/#" class="text-decoration-none-one text-white">please fill out the form.</a></div>
-        <nav class="navbar navbar-expand-lg bg-white w-100">
-            <div class="container-fluid w-100 w-md-auto my-md-2 my-1 max-width-lg">
+        <nav class="navbar navbar-expand-lg bg-white w-100 py-0">
+            <div class="container-fluid w-100 w-md-auto max-width-lg">
                 <a class="navbar-brand ms-2 me-auto" href="/"><img src="./logo.svg"></a>
-                <div class="mb-2 d-flex d-lg-none flex-row my-auto">
-                    <div class="dropdown mx-2">
-                        <button class="nav-link text-bold" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="d-flex d-lg-none flex-row my-auto pt-3">
+                    <div class="dropdown mx-2 pb-3">
+                        <button class="nav-link text-bold search-dropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-search fw-bold"></i>
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
+                        <ul class="dropdown-menu dropdown-menu-end rounded-0">
                             <li class="dropdown-item border-secondary">
-                                <form class="d-flex" role="search">
+                                <form class="position-relative" role="search">
                                     <input
-                                        class="form-control form-control-border-focus shadow-none border-end-0 rounded-0 me-0 w-auto"
+                                        class="dropdown-search-input"
                                         type="search" placeholder="What are you looking for today?" aria-label="Search">
-                                    <span class="btn bi bi-search pt-2 pe-2 border border-start-0 me-2 border-secondary"></span>
+                                    <span class="btn bi bi-search pt-2 pe-2 color-secondary position-absolute translate-middle-y pb-2 top-50 end-0"></span>
                                 </form>
                             </li>
                         </ul>
@@ -115,19 +115,18 @@
                             <a class="nav-link" href="#">About Us</a>
                         </li>
                     </ul>
-                    <div class="ms-auto mb-2 d-lg-flex d-none flex-row">
-                        <div class="dropdown mx-1">
+                    <div class="ms-auto d-lg-flex d-none flex-row pt-4">
+                        <div class="dropdown mx-1 pb-4">
                             <button class="nav-link text-bold search-dropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-search"></i>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
+                            <ul class="dropdown-menu dropdown-menu-end rounded-0">
                                 <li class="dropdown-item border-secondary">
-                                    <form class="d-flex" role="search">
-                                        <input
-                                            class="form-control form-control-border-focus border-end-0 rounded-0 me-0 w-auto"
+                                    <form class="position-relative" role="search">
+                                        <input class="dropdown-search-input"
                                             type="search" placeholder="What are you looking for today?"
                                             aria-label="Search">
-                                        <span class="bi bi-search pt-2 pe-2 border border-start-0 rounded-0 me-2"></span>
+                                        <span class="bi bi-search pt-2 pe-2 me-2 color-secondary position-absolute translate-middle-y pb-2 top-50 end-0"></span>
                                     </form>
                                 </li>
                             </ul>
@@ -391,7 +390,7 @@
                         </div>
                         <div class="w-auto d-lg-flex d-none my-auto">
                             <button id="leftScrollArrow" class="categories-slide-button mx-2 disabled" disabled="true"
-                                onclick="scrollToTheLeft()"><i class="bi bi-chevron-left text-white"></i></button>
+                                onclick="scrollToTheLeft()"><i class="bi bi-chevron-left text-offwhite"></i></button>
                             <button id="rightScrollArrow" class="categories-slide-button mx-2"
                                 onclick="scrollToTheRight()"><i class="bi bi-chevron-right text-white"></i></button>
                         </div>
@@ -399,20 +398,20 @@
                     <div class="w-100 position-relative">
                         <div class="position-absolute start-0 top-50 translate-middle ps-5 d-lg-none">
                             <button id="leftScrollArrow2"
-                                class="btn categories-relative-button bg-secondary-one rounded-circle disabled"
+                                class="border-0 categories-relative-button p-2 bg-secondary-one rounded-circle disabled"
                                 onclick="scrollToTheLeft()" disabled="true" role="button">
-                                <span class="bi bi-chevron-left text-white"></span>
+                                <span class="bi bi-chevron-left text-offwhite px-1"></span>
                             </button>
                         </div>
                         <div class="position-absolute start-100 top-50 translate-middle pe-5 d-lg-none">
                             <button id="rightScrollArrow2"
-                                class="btn categories-relative-button bg-secondary-one rounded-circle"
+                                class="border-0 categories-relative-button p-2 bg-secondary-one rounded-circle"
                                 onclick="scrollToTheRight()" role="button">
-                                <span class="bi bi-chevron-right text-white"></span>
+                                <span class="bi bi-chevron-right text-offwhite px-1"></span>
                             </button>
                         </div>
                         <div class="d-flex flex-row overflow-x-scroll hide-scrollbar vw-100" id="scroll">
-                            <div class="cards-one d-flex">
+                            <div class="cards-one d-flex ms-5">
                                 <div class="card-one">
                                     <a href="" class="w-100 card-one-img-container">
                                         <img src="./images/imaging.avif" alt="Imaging" class="card-one-image">
@@ -476,7 +475,7 @@
                                     <div class="my-4 fs-3">Patient Monitors</div>
                                 </div>
                             </div>
-                            <div class="cards-one d-flex">
+                            <div class="cards-one d-flex me-5">
                                 <div class="card-one">
                                     <a href="" class="w-100 card-one-img-container">
                                         <img src="./images/ventilator.avif" alt="Ventilators" class="card-one-image">
